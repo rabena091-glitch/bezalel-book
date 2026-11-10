@@ -20,7 +20,7 @@
 <meta name="page-type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500..700&family=Hanken+Grotesk:wght@400..700&family=Noto+Serif+Hebrew:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" href="assets/ui/cards.css">
 <link rel="stylesheet" href="assets/motion/motion.css">
@@ -203,6 +203,42 @@
   @media (max-width: 639px) { .names__tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
   /* square corners on every picture (client's request) */
   .pic, .pic > img, .frame, .frame__img, .hero__stage, .hero__stage > img, .names__pic, .author__pic, .menu-card .panel, .names__tiles li, button.zoom, button.zoom > img { border-radius: 0 !important; }
+</style>
+<style>
+  /* VARIANT 2: one idea carried through: the Hebrew words of Scripture as the page's graphic; art without frames; two grounds */
+  :root { --head: "EB Garamond", Georgia, serif; --gold: #a8781c; --gold-on-navy: #d9ab4a; --rule: color-mix(in oklab, var(--ink) 14%, transparent); --h2s: 30px; --h1s: 46px; }
+  @media (max-width: 639px) { :root { --h2s: 25px; --h1s: 31px; } }
+  .hero h1, #hero-h, main h2, footer h2 { font-family: var(--head) !important; font-weight: 600 !important; letter-spacing: -0.005em !important; }
+  .hero h1, #hero-h { line-height: 1.08 !important; }
+  main h2, footer h2 { line-height: 1.15 !important; }
+  /* white sections parted by a hairline */
+  main > section.section:not(.ground-inverse) + section.section:not(.ground-inverse) { border-top: 1px solid var(--rule); }
+  /* the Hebrew of the verses as graphic */
+  .he-mark { margin: 0 0 6px !important; font-family: "Frank Ruhl Libre", serif !important; font-weight: 400; font-size: 44px !important; line-height: 1.15 !important; color: var(--gold); text-align: right; direction: rtl; }
+  .he-mark--gold { color: var(--gold-on-navy); }
+  .he-mark b { font-weight: 400; color: var(--p-accent); }
+  #lineage .he-mark { font-size: 34px !important; text-align: left; }
+  .excerpt .he-mark { font-size: 56px !important; text-align: left; margin-bottom: 0 !important; }
+  @media (min-width: 1024px) { .he-mark { font-size: 64px !important; } #lineage .he-mark { font-size: 52px !important; } .excerpt .he-mark { font-size: 72px !important; } }
+  @media (max-width: 639px) { .he-mark { font-size: 38px !important; text-align: left; } #lineage .he-mark { font-size: 24px !important; } }
+  /* art without frames, full width on a phone */
+  .names__tiles span { color: var(--muted); }
+  @media (max-width: 639px) {
+    #spirit .pic, .names__pic, #edition .pic--43 { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; }
+    #spirit .spirit { gap: 24px; }
+  }
+  .read__tabs button[aria-selected="true"] { background: var(--ink); }
+  .excerpt { border-top: 0; }
+  /* grey-blue of the cover instead of near-black navy */
+  :root { --slate: #4d5e78; }
+  :root { --p-inv-bg: #4d5e78; --p-inv-surface: #5a6b86; --p-inv-muted: #dbe1ea; --p-inv-action-ink: #34435a; --p-inv-accent-ink: #34435a; }
+  .he-mark--gold { color: #f1d08a !important; }
+  /* Hebrew in one Times-like serif */
+  main .excerpt p.he-mark, main p.he-mark, .he, .he-mark, .letters, #lineage .rows__value { font-family: "Times New Roman", "Noto Serif Hebrew", "David", serif !important; }
+  /* Hebrew lines set right, as Hebrew is read */
+  main p.he-mark, main .excerpt p.he-mark, #lineage p.he-mark { text-align: right !important; direction: rtl; }
+  footer.closing .btn--primary { background: #b8501c !important; color: #fff !important; border-color: #b8501c !important; }
+  footer.closing .btn--primary:hover { background: #a2461a !important; }
   .lb__bar { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 101; display: flex; align-items: center; justify-content: center; gap: 20px; pointer-events: none; }
   .lb__nav { pointer-events: auto; width: 52px; height: 52px; border-radius: 999px; border: 0; background: #fff; color: #13284a; font: 400 32px/1 var(--font-text); cursor: pointer; display: flex; align-items: center; justify-content: center; padding-bottom: 4px; }
   .lb__count { color: #fff; font: 500 15px/1 var(--font-text); min-width: 44px; text-align: center; }
@@ -298,6 +334,7 @@
     <div class="wrap">
       <div class="grid spirit">
         <div class="span-6 stack-4 spirit__text">
+          <p class="he-mark he-mark--gold" lang="he" dir="rtl" aria-hidden="true">רוּחַ אֱלֹהִים</p>
           <h2 id="spirit-h">The first artist filled with the Spirit of God</h2>
           <blockquote class="verse">“And I have filled him with the spirit of God, in wisdom, and in understanding, and in knowledge, and in all manner of workmanship, to devise cunning works, to work in gold, and in silver, and in brass.” <cite>Exodus 31:3–4</cite></blockquote>
           <p>Bezalel is the first person in Scripture whom God Himself calls filled with the Spirit of God, and the gift is given for work with the hands.</p>
@@ -310,6 +347,7 @@
   <section class="section" id="lineage" aria-labelledby="lineage-h">
     <div class="wrap">
       <div class="section-head">
+        <p class="he-mark" lang="he" dir="rtl" aria-hidden="true">בְּצַלְאֵל בֶּן־אוּרִי בֶן־חוּר לְמַטֵּה יְהוּדָה</p>
         <h2 id="lineage-h">Bezalel, son of Uri, son of Hur, of Yehuda</h2>
         <p>This is how Exodus 31:2 names the artist. The book gives one chapter to each name and reads it through its Hebrew sound, its meanings and its echoes elsewhere in Scripture. The connections drawn are the author's own reading.</p>
       </div>
@@ -340,7 +378,7 @@
   </section>
 
 
-  <section class="section ground-surface" id="read" aria-labelledby="read-h">
+  <section class="section" id="read" aria-labelledby="read-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="read-h">Read an excerpt from each chapter</h2>
@@ -348,23 +386,27 @@
       <div class="read">
         <div class="read__tabs" role="tablist" aria-label="Chapters"><button type="button" role="tab" id="tab-bezalel" aria-controls="panel-bezalel" aria-selected="true" tabindex="0">Bezalel</button><button type="button" role="tab" id="tab-uri" aria-controls="panel-uri" aria-selected="false" tabindex="-1">Uri</button><button type="button" role="tab" id="tab-hur" aria-controls="panel-hur" aria-selected="false" tabindex="-1">Hur</button><button type="button" role="tab" id="tab-yehuda" aria-controls="panel-yehuda" aria-selected="false" tabindex="-1">Yehuda</button></div>
         <div class="excerpt" role="tabpanel" id="panel-bezalel" aria-labelledby="tab-bezalel">
+<p class="he-mark" lang="he" dir="rtl" aria-hidden="true">בְּצַלְאֵל</p>
 <p class="excerpt__ch">From the chapter Bezalel. In the Shadow of God</p>
 <p>In the language of the Tanakh, the root TZLL (<span class="he" lang="he">צלל</span>) has several meanings: TZEL (<span class="he" lang="he">צֵל</span>, lit. shadow); TZALAL (<span class="he" lang="he">צָלַל</span>, lit. to plunge, to dive). From the same root comes METZOLAH (<span class="he" lang="he">מְצוֹלָה</span>, lit. the depth of the sea).</p>
 <p>In this reading, the shadow of the Most High is no longer a flat silhouette. It becomes a depth one enters, like water, not merely shade under which one stands.</p>
 <p>That depth is not silent. It calls forth a response: trembling. The same root, in another form, appears as TZALELU (<span class="he" lang="he">צָלְלוּ</span>, lit. trembled, shook at a sound) in the prophet: “my lips quivered at the voice” (Hab. 3:16). The shadow is not only a quiet refuge; it is a place where the voice reaches a person, and the whole self trembles as that voice draws near.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-uri" aria-labelledby="tab-uri" hidden>
+<p class="he-mark" lang="he" dir="rtl" aria-hidden="true">אוּרִי</p>
 <p class="excerpt__ch">From the chapter Uri. Arise, Shine</p>
 <p>The name URI (<span class="he" lang="he">אוּרִי</span>, lit. my light) is written with the same four letters as one of the most piercing commands in the Tanakh: KUMI ORI KI VA OREKH (<span class="he" lang="he">קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ</span>), “Arise, shine; for thy light is come” (Isa. 60:1).</p>
 <p>Here ORI (<span class="he" lang="he">אוֹרִי</span>, lit. shine) is an imperative verb. In the ancient Hebrew biblical text, where vowels were not written, the name of Bezalel’s father and this prophetic command appear as the same four letters. The name can therefore also be read as containing a command: arise, shine.</p>
 <p>Bezalel is the answer to that imperative.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-hur" aria-labelledby="tab-hur" hidden>
+<p class="he-mark" lang="he" dir="rtl" aria-hidden="true">חוּר</p>
 <p class="excerpt__ch">From the chapter Hur. The Path of Purity</p>
 <p>In antiquity, producing snow-white linen was a long and labor-intensive process. First, the fabric was boiled repeatedly in an alkaline solution called NEDJRI in Egyptian, a word translated as “pure” or “divine.”</p>
 <p>Then the fabric was washed again and again, spread out in the sun, moistened with water, and left outdoors in the light. This cycle was repeated many times, so bleaching linen took weeks, and sometimes months.</p>
 <p>The craftsman’s task was not to make the linen white by adding color. It was to remove everything that obscured the whiteness already present in it.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-yehuda" aria-labelledby="tab-yehuda" hidden>
+<p class="he-mark" lang="he" dir="rtl" aria-label="Yehuda in Hebrew, with the letter dalet marked">יהו<b>ד</b>ה</p>
 <p class="excerpt__ch">From the chapter Yehuda. The Tribe of Praise</p>
-<p class="letters" lang="he" dir="rtl" aria-label="Yehuda in Hebrew, with the letter dalet marked"><span>י</span><span>ה</span><span>ו</span><b>ד</b><span>ה</span></p>
+
 <p>Yehuda (<span class="he" lang="he">יְהוּדָה</span>) is unique in the way its letters preserve the order of the great Name. Many names in Scripture contain an element of the name of the Most High. But no other name places these four letters in exactly the same order as the unutterable Name itself, with only one letter between them: DALET (<span class="he" lang="he">ד</span>), the first letter of DAM (<span class="he" lang="he">דָּם</span>, lit. blood), here representing a human being.</p>
 <p>The name Yehuda can therefore be read as a human being of flesh and blood immersed in the glory of God, surrounded by the name of the Most High, and empowered by the Creator.</p>
 </div>
@@ -394,7 +436,7 @@
     </div>
   </section>
 
-  <section class="section ground-surface" id="author" aria-labelledby="author-h">
+  <section class="section" id="author" aria-labelledby="author-h">
     <div class="wrap">
       <div class="author">
           <div class="author__head">
