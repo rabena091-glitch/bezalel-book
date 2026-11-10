@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /bezalel-book/v1/
+Disallow: /bezalel-book/v2/
+Sitemap: https://rabena091-glitch.github.io/bezalel-book/sitemap.xml
