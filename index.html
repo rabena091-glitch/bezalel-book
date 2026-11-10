@@ -187,6 +187,10 @@
   .nav__logo, .closing .nav__logo { font-family: var(--font-text) !important; font-weight: 700; }
   .btn--xl { font-family: var(--font-text) !important; font-size: 18px !important; }
   #lineage .rows__value { font-size: 20px !important; }
+  .author { display: flex; flex-direction: column; gap: 16px; max-width: 760px; }
+  .author > * { margin: 0 !important; }
+  .author__pic { width: 240px; max-width: 50%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); display: block; }
+  #edition .rows__value { white-space: nowrap !important; max-width: none !important; }
 </style>
 </head>
 <body>
@@ -362,17 +366,13 @@
 
   <section class="section ground-surface" id="author" aria-labelledby="author-h">
     <div class="wrap">
-      <div class="grid grid--top fill">
-        <div class="span-6 stack-4">
+      <div class="author">
           <h2 id="author-h">Ephraim Kalish, artist and author</h2>
+          <img class="author__pic" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" loading="lazy" data-source="client" data-subject="portrait of the author">
           <p>An Israeli artist and filmmaker behind the TORAART project. He has studied Bezalel for more than thirty years and writes about him as one artist about another.</p>
           <p>His film Bezalel tells the same story on screen.</p>
           <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Get the film</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Write to the author</a></p>
         </div>
-        <div class="frame frame--photo frame--fill span-6 start-7">
-          <img class="frame__img" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" style="object-position: 50% 30%" loading="lazy" data-source="client" data-subject="portrait of the author">
-        </div>
-      </div>
     </div>
   </section>
 </main>
