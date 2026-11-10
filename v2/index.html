@@ -254,6 +254,9 @@
   .lb__count { position: fixed; left: 0; right: 0; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 101; }
   .lb__hint { bottom: calc(46px + env(safe-area-inset-bottom, 0px)) !important; }
   @media (max-width: 1023px) { .lb img { height: calc(100svh - 160px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important; } }
+  .edition__col { display: flex; flex-direction: column; gap: 24px; }
+  .edition__buy { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
+  @media (max-width: 639px) { .edition__buy .btn { width: 100%; justify-content: center; } }
 </style>
 </head>
 <body>
@@ -412,14 +415,16 @@
         <h2 id="edition-h">Hardcover, 8 × 8 inches</h2>
       </div>
       <div class="grid grid--top fill">
-        <ul class="rows rows--spec span-6">
-          <li><span class="rows__name">Pages</span><span class="rows__value">24, in colour</span></li>
-          
-          <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
-          
-          <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
+        <div class="span-6 edition__col">
+        <ul class="rows rows--spec">
+          <li><span class="rows__name">Hardcover</span><span class="rows__value">$26.90</span></li>
           <li><span class="rows__name">Digital edition</span><span class="rows__value">PDF, $6.90</span></li>
+          <li><span class="rows__name">Pages</span><span class="rows__value">24, in colour</span></li>
+          <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
+          <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
         </ul>
+        <div class="edition__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="link" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF</a></div>
+        </div>
         <div class="pic pic--43 span-6 start-7"><img src="../assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" loading="lazy" data-source="client" data-subject="the hardcover"></div>
       </div>
     </div>
