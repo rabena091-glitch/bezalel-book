@@ -260,6 +260,10 @@
   .edition__buy .btn--pdf { background: #4d5e78 !important; border-color: #4d5e78 !important; color: #fff !important; }
   .edition__buy .btn--pdf:hover { background: #3f4f67 !important; }
   @media (max-width: 639px) { .edition__buy { max-width: none; } }
+  .read__tabs { flex-wrap: nowrap; gap: 6px; }
+  .read__tabs button { padding: 0 14px; }
+  .read__tabs button[aria-selected="true"] { background: #4d5e78 !important; border-color: #4d5e78 !important; color: #fff !important; }
+  @media (max-width: 380px) { .read__tabs button { padding: 0 11px; font-size: 14px; } }
 </style>
 </head>
 <body>
@@ -319,7 +323,7 @@
           <p class="hero__lead">The Bible tells us almost nothing about Bezalel's life, yet it repeats his genealogy three times. This illustrated book by Ephraim Kalish reads those four names in the original Hebrew.</p>
           <p class="hero__for">For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p>
         </div>
-        <div class="btn-row"><a class="btn btn--primary" href="#inside">Look inside<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        
       </div>
       <div class="hero__stage">
         <img src="../assets/img/cover-hero.jpg" alt="The cover: an eagle in flight over the title Bezalel in Hebrew and English, with the author's name" fetchpriority="high" data-source="client" data-subject="the book's cover">
