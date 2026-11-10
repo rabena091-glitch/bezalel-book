@@ -209,6 +209,14 @@
   .lb__hint { bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important; }
   @media (min-width: 1024px) { .lb__bar { bottom: 24px; } }
   @media (max-width: 1023px) { .lb { align-items: flex-start; padding-top: calc(76px + env(safe-area-inset-top, 0px)); } .lb img { height: calc(100svh - 200px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); margin: 0 auto; } }
+  /* arrows on the spread itself */
+  .lb__bar { position: static !important; display: contents !important; }
+  .lb__nav { position: fixed !important; top: 50%; transform: translateY(-50%); z-index: 101; width: 48px !important; height: 48px !important; background: rgba(19,40,74,.72) !important; color: #fff !important; box-shadow: 0 0 0 1px rgba(255,255,255,.35); }
+  .lb__nav[data-step="-1"] { left: calc(10px + env(safe-area-inset-left, 0px)); }
+  .lb__nav[data-step="1"] { right: calc(10px + env(safe-area-inset-right, 0px)); }
+  .lb__count { position: fixed; left: 0; right: 0; bottom: calc(18px + env(safe-area-inset-bottom, 0px)); z-index: 101; }
+  .lb__hint { bottom: calc(46px + env(safe-area-inset-bottom, 0px)) !important; }
+  @media (max-width: 1023px) { .lb img { height: calc(100svh - 160px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important; } }
 </style>
 </head>
 <body>
@@ -381,8 +389,7 @@
             <img class="author__pic" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" loading="lazy" data-source="client" data-subject="portrait of the author">
             <h2 id="author-h">Ephraim Kalish</h2>
           </div>
-          <p>An Israeli artist and filmmaker behind the TORAART project. He has studied Bezalel for more than thirty years and writes about him as one artist about another.</p>
-          <p>His film Bezalel tells the same story on screen.</p>
+          <p>Ephraim Kalish is an Israeli artist, author, and the filmmaker behind the TORAART project. His work approaches Scripture through the Hebrew language and Jewish cultural context, exploring the biblical meaning of creativity and the artist’s calling before God.</p>
           <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Get the film</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Write to the author</a></p>
         </div>
     </div>
