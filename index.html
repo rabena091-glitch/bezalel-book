@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en" data-type="product" data-radius="soft" data-buttons="pill" data-motion>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Bezalel: an illustrated book on the first artist of the Bible</title>
+<meta name="description" content="Ephraim Kalish reads Bezalel's genealogy in the original Hebrew, one name per chapter, in a 24-page illustrated hardcover.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Bezalel: an illustrated book on the first artist of the Bible">
+<meta property="og:description" content="A 24-page hardcover by Ephraim Kalish on the names in Bezalel's genealogy.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#ffffff">
+<!-- <link rel="canonical" href="https://[the client's domain]/"> -->
+<meta name="site-kind" content="other">
+<meta name="page-type" content="product">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #ffffff; --p-surface: #f3eee5; --p-ink: #13284a; --p-muted: #576782;
+  --p-accent: #b8501c; --p-accent-ink: #ffffff; --p-action: #b8501c; --p-action-ink: #ffffff;
+  --p-inv-bg: #13284a; --p-inv-surface: #213556; --p-inv-ink: #ffffff; --p-inv-muted: #9da7b7;
+  --p-inv-accent: #ffffff; --p-inv-accent-ink: #13284a; --p-inv-action: #ffffff; --p-inv-action-ink: #13284a;
+  --font-display: "Newsreader", Georgia, serif;
+  --font-text: "Hanken Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.018em;
+  --display-tracking-xl: -0.025em;
+  --ly-scale: 1.06;
+}
+</style>
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<style>
+  .menu-card .panel { --p-h: 200px; }
+  .he { font-family: "Frank Ruhl Libre", serif; font-weight: 400; direction: rtl; unicode-bidi: isolate; }
+  #lineage .rows__value { font-size: 24px; line-height: 1.2; color: var(--ink); }
+  .pic { position: relative; overflow: clip; border-radius: var(--r-lg); background: var(--surface); }
+  .pic > img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .pic--43 { aspect-ratio: 4 / 3; }
+  .pic--45 { aspect-ratio: 4 / 5; }
+  .pic--11 { aspect-ratio: 1 / 1; }
+  .ts { align-items: stretch; }
+  .ts__side { display: flex; flex-direction: column; justify-content: space-between; gap: 32px; }
+  .ts__small { width: calc((100% - 48px) / 2); }
+  .ts__big { max-height: 628px; }
+  @media (max-width: 1023px) { .ts { display: flex; flex-direction: column; gap: 32px; } .ts__small { width: min(100%, 300px); } }
+  @media (max-width: 639px) { .ts__small { display: none; } .grid.fill > .frame--fill { flex: none; min-height: 0; aspect-ratio: 4 / 3; } #author .frame--fill { aspect-ratio: 4 / 3; } #edition .pic--43 { aspect-ratio: 16 / 9; } }
+  
+  /* compact layout, phone first (client's request): sections sized by their content */
+  .pic--spread { aspect-ratio: auto; background: transparent; border-radius: 0; }
+  .pic--spread > img { height: auto; }
+  .only-phone { display: none !important; }
+  @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
+  main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
+  main > section.statement { padding-top: 72px; padding-bottom: 72px; }
+  .section-head { margin-bottom: 32px; }
+  main > section.section > .wrap, footer.closing > .wrap { height: auto !important; }
+  main > section.section > .wrap > .fill, .group > .fill { flex: none !important; }
+  main > section.section, footer.closing { display: block !important; }
+  .frame--fill { height: auto !important; }
+  #lineage .frame--fill { aspect-ratio: 1070 / 830; }
+  #author .frame--fill { aspect-ratio: 1 / 1; }
+  #edition .pic--43 { aspect-ratio: 1 / 1; }
+  @media (max-width: 1023px) {
+    main > section.section, footer.closing { padding-top: 56px; padding-bottom: 56px; }
+    main > section.statement { padding-top: 40px; padding-bottom: 40px; }
+    .hero.hero--product { height: auto !important; min-height: 0 !important; padding-bottom: 32px; }
+  }
+  @media (max-width: 639px) {
+    :root { --t-h1: 30px; --t-h2: 24px; --t-lead: 17px; --ly-h1: 30px; }
+    .hero h1, #hero-h { font-size: 30px !important; line-height: 1.1; }
+    h2 { font-size: 24px !important; line-height: 1.2; }
+    .mo-wh__text { font-size: 21px !important; line-height: 1.35; }
+    .hero__lead { font-size: 16px; }
+    main > section.section, footer.closing { padding-top: 40px; padding-bottom: 40px; }
+    main > section.statement { padding-top: 24px; padding-bottom: 24px; }
+    .section-head { margin-bottom: 20px; }
+    .hero.hero--product { padding-bottom: 24px; }
+    .hero__stage { height: auto !important; aspect-ratio: 1 / 1; }
+    .rows > li { padding-block: 12px; }
+    .grid { row-gap: 16px; }
+    .ts { gap: 20px !important; }
+    #inside .grid { gap: 12px; }
+    #edition .pic--43 { aspect-ratio: auto !important; background: transparent; }
+    #edition .pic--43 img { height: auto; }
+    #author .frame--fill { aspect-ratio: 1 / 1 !important; width: 72%; }
+    .close--type .btn--xl { min-height: 52px; font-size: 18px; }
+    .closing__links { margin-top: 40px; }
+  }
+</style>
+</head>
+<body>
+<!-- type: product (site-kind other; a printed book)
+     deal: hero product, nav nav-cards, close close-type, footer footer-dark, rhythm dark-band, buttons pill, mark arc,
+     palette: the client's own (start.mjs brand: white ground of the book's spreads, cover navy ink, rust accent from the eagle), type newsreader
+     moments: word-highlight in #question -->
+
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#inside">Pages <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <a class="menu-card span-4" href="#lineage">
+              <div class="panel"><img class="frame__img" src="assets/img/four-names.jpg" alt="Bezalel, Uri, Hur and a man of Yehuda with the lion banner, drawn side by side" loading="lazy"></div>
+              <span class="t-card">The four names</span>
+              <span class="t-small muted">One chapter for each name in the verse</span>
+            </a>
+            <a class="menu-card span-4" href="#inside">
+              <div class="panel"><img class="frame__img" src="assets/img/spread-bezalel.jpg" alt="The open book at the chapter In the Shadow of God" loading="lazy"></div>
+              <span class="t-card">Inside the book</span>
+              <span class="t-small muted">Hebrew verse, English text, a full picture</span>
+            </a>
+            <a class="menu-card span-4" href="#illustrations">
+              <div class="panel"><img class="frame__img" src="assets/img/eagle-big.jpg" alt="Bezalel seated under the wing of a great eagle" loading="lazy"></div>
+              <span class="t-card">Illustrations</span>
+              <span class="t-small muted">Created for this book</span>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#illustrations">Illustrations</a></div>
+      <div class="nav__item"><a class="nav__link" href="#edition">Edition</a></div>
+      <div class="nav__item"><a class="nav__link" href="#author">Author</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book</a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
+      <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero--product" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <div class="hero__head">
+        <div>
+          <h1 id="hero-h">An illustrated book on Bezalel's lineage</h1>
+          <p class="hero__lead">One name a chapter, read in the original Hebrew. Hardcover, $26.90.</p>
+        </div>
+        <div class="btn-row"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+      </div>
+      <div class="hero__stage">
+        <img class="only-phone" src="assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" fetchpriority="high"><img class="only-wide" src="assets/img/book-wrap.jpg" alt="The book's full cover laid open: an eagle in flight across the front and back, the title in Hebrew and English" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="client" data-subject="the book's cover">
+      </div>
+    </div></div>
+  </section>
+
+  <section class="section" id="lineage" aria-labelledby="lineage-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="lineage-h">Son of Uri, son of Hur, of Yehuda. <span class="muted">Exodus 31:2 names Bezalel this way.</span></h2>
+      </div>
+      <div class="grid grid--top fill">
+        <ul class="rows span-6">
+          <li><span class="rows__name">Bezalel</span><p>In the shadow of God: the word TZEL, shadow and shelter, inside the artist's name.</p><span class="rows__value he" lang="he">בְּצַלְאֵל</span></li>
+          <li><span class="rows__name">Uri</span><p>The father's name, read as light beside the shadow.</p><span class="rows__value he" lang="he">אוּרִי</span></li>
+          <li><span class="rows__name">Hur</span><p>The path of purity: white linen, and the freedom that the same root carries.</p><span class="rows__value he" lang="he">חוּר</span></li>
+          <li><span class="rows__name">Yehuda</span><p>The tribe of praise, the lion and the blue banner at the head of the camp.</p><span class="rows__value he" lang="he">יְהוּדָה</span></li>
+        </ul>
+        <div class="frame frame--photo frame--fill span-6 start-7">
+          <img class="frame__img" src="assets/img/four-names.jpg" alt="Four men of the genealogy side by side: one with the lion banner of Yehuda, an old man with white linen, a man with a torch, and Bezalel in a work apron, the four names in Hebrew beneath" loading="lazy" data-source="client" data-subject="illustration of the four names">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section statement" id="question" data-moment="word-highlight" aria-label="The book's question">
+    <div class="wrap">
+      <p class="mo-wh__text">The Torah says almost nothing about Bezalel's life, yet it gives his genealogy <strong>three times</strong>, word for word. This book reads that genealogy name by name, as a key to an artist's calling.</p>
+    </div>
+  </section>
+
+  <section class="section" id="inside" aria-labelledby="inside-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="inside-h">A full-page picture beside every chapter</h2>
+        <p>Each chapter opens on a Hebrew verse, then the English text, with Scripture cited by book and verse.</p>
+      </div>
+      <div class="grid fill">
+        <div class="pic pic--spread span-6"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></div>
+        <div class="pic pic--spread span-6"><img src="assets/img/spread-hur.jpg" alt="Pages 12 and 13: Hur holding white linen, beside the chapter Hur. The Path of Purity" loading="lazy" data-source="client" data-subject="spread, chapter on Hur"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-inverse" id="illustrations" aria-labelledby="ill-h">
+    <div class="wrap">
+      <div class="grid ts">
+        <div class="ts__side span-6">
+          <div class="stack-4">
+            <h2 id="ill-h">Illustrations made for this book</h2>
+            <p>Every illustration was created for this book, from the eagle across the cover to the blue banners of Yehuda's camp.</p>
+          </div>
+          <div class="pic pic--11 ts__small"><img src="assets/img/yehuda-detail.jpg" alt="Men of Yehuda under blue banners before a cliff" loading="lazy" data-source="client" data-subject="illustration, the camp of Yehuda"></div>
+        </div>
+        <div class="pic pic--11 ts__big span-6 start-7"><img src="assets/img/eagle-big.jpg" alt="Bezalel seated against a wall under the wing of a great eagle, looking up" loading="lazy" data-source="client" data-subject="illustration, Bezalel and the eagle"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="edition" aria-labelledby="edition-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="edition-h">Hardcover, 8 by 8 inches</h2>
+      </div>
+      <div class="grid grid--top fill">
+        <ul class="rows rows--spec span-6">
+          <li><span class="rows__name">Pages</span><span class="rows__value">24, in colour</span></li>
+          <li><span class="rows__name">Size</span><span class="rows__value">20 × 20 cm</span></li>
+          <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
+          <li><span class="rows__name">Language</span><span class="rows__value">English and Hebrew</span></li>
+          <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
+          <li><span class="rows__name">Digital edition</span><span class="rows__value">PDF download</span></li>
+        </ul>
+        <div class="pic pic--43 span-6 start-7"><img class="only-phone" src="assets/img/spread-yehuda.jpg" alt="Pages 20 and 21: the camp of Yehuda under blue banners, beside the chapter Yehuda. The Tribe of Praise" loading="lazy"><img class="only-wide" src="assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" loading="lazy" data-source="client" data-subject="the hardcover"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section ground-surface" id="author" aria-labelledby="author-h">
+    <div class="wrap">
+      <div class="grid grid--top fill">
+        <div class="span-6 stack-4">
+          <h2 id="author-h">Ephraim Kalish, artist and author</h2>
+          <p>An Israeli artist and filmmaker behind the TORAART project. He has studied Bezalel for more than thirty years and writes about him as one artist about another.</p>
+          <p>His film Bezalel tells the same story on screen.</p>
+          <p><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Watch the film</a></p>
+        </div>
+        <div class="frame frame--photo frame--fill span-6 start-7">
+          <img class="frame__img" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" style="object-position: 50% 30%" loading="lazy" data-source="client" data-subject="portrait of the author">
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Order Bezalel in hardcover</h2>
+        <p>$26.90 through AmendesignShop on Etsy.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
+          <p class="footer__lede">Books and films by Ephraim Kalish</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="#lineage">Four names</a></li><li><a href="#inside">Inside</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Illustrations</h3><ul><li><a href="#illustrations">Pictures</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Edition</h3><ul><li><a href="#edition">Details</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">Etsy shop</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Author</h3><ul><li><a href="#author">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Ephraim Kalish</span>
+        <div class="socials"></div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="assets/system.js"></script>
+<script type="module" src="assets/motion/motion.js"></script>
+<script type="module" src="assets/layout/layout.js"></script>
+</body>
+</html>
