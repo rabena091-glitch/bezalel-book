@@ -21,7 +21,7 @@
 <meta name="page-type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500..700&family=Hanken+Grotesk:wght@400..700&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500..700&family=Hanken+Grotesk:wght@400..700&family=Noto+Serif+Hebrew:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/system.css">
 <link rel="stylesheet" href="../assets/ui/cards.css">
 <link rel="stylesheet" href="../assets/motion/motion.css">
@@ -223,7 +223,6 @@
   @media (min-width: 1024px) { .he-mark { font-size: 64px !important; } #lineage .he-mark { font-size: 52px !important; } .excerpt .he-mark { font-size: 72px !important; } }
   @media (max-width: 639px) { .he-mark { font-size: 38px !important; text-align: left; } #lineage .he-mark { font-size: 24px !important; } }
   /* art without frames, full width on a phone */
-  .names__tiles li { background: none !important; padding: 12px 0 0 !important; border-top: 2px solid var(--ink); border-radius: 0 !important; }
   .names__tiles span { color: var(--muted); }
   @media (max-width: 639px) {
     #spirit .pic, .names__pic, #edition .pic--43 { width: 100vw !important; max-width: 100vw !important; margin-left: calc(50% - 50vw) !important; }
@@ -231,6 +230,12 @@
   }
   .read__tabs button[aria-selected="true"] { background: var(--ink); }
   .excerpt { border-top: 0; }
+  /* grey-blue of the cover instead of near-black navy */
+  :root { --slate: #4d5e78; }
+  :root { --p-inv-bg: #4d5e78; --p-inv-surface: #5a6b86; --p-inv-muted: #dbe1ea; --p-inv-action-ink: #34435a; --p-inv-accent-ink: #34435a; }
+  .he-mark--gold { color: #f1d08a !important; }
+  /* Hebrew in one Times-like serif */
+  .he, .he-mark, .letters, #lineage .rows__value { font-family: "Times New Roman", "Noto Serif Hebrew", "David", serif !important; }
 </style>
 </head>
 <body>
@@ -325,7 +330,7 @@
           <li><b>Bezalel</b><span>In the shadow of God</span></li>
           <li><b>Uri</b><span>My light</span></li>
           <li><b>Hur</b><span>Purity and freedom</span></li>
-          <li><b>Yehuda</b><span>Praising God</span></li>
+          <li><b>Yehuda</b><span>Praising the Lord</span></li>
         </ul>
       </div>
     </div>
