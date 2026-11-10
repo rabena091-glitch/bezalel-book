@@ -46,7 +46,6 @@
 <script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
 <link rel="modulepreload" href="assets/moments/moments.js">
 <link rel="modulepreload" href="assets/moments/lib.js">
-<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
 <style>
   .menu-card .panel { --p-h: 200px; }
   .he { font-family: "Frank Ruhl Libre", serif; font-weight: 400; direction: rtl; unicode-bidi: isolate; }
@@ -118,6 +117,17 @@
   #lineage .section-head p { max-width: 62ch; margin-top: 10px; }
   @media (max-width: 1023px) { .spirit { display: flex; flex-direction: column; align-items: stretch; } }
   @media (max-width: 639px) { .verse { font-size: 18px; } .hero__kicker-line { font-size: 12px; } #lineage .section-head p, #inside .section-head p { font-size: 15px; line-height: 1.5; } }
+  /* hero as one column: title line, cover, then the words (client's layout) */
+  .hero.hero--product .hero__in { display: flex !important; flex-direction: column; }
+  .hero.hero--product .hero__head { display: flex !important; flex-direction: column; align-items: flex-start; gap: 14px; order: 2; }
+  .hero.hero--product .hero__head > :first-child { display: flex !important; flex-direction: column; gap: 14px; }
+  .hero.hero--product .hero__head > :first-child > * { margin: 0 !important; }
+  .hero.hero--product .hero__kicker-line { order: 0; }
+  .hero.hero--product .hero__stage { order: 1; margin: 16px auto 28px !important; }
+  .hero .hero__lead, .hero__for { text-wrap: wrap !important; }
+  .hero .hero__lead, .hero__for, #lineage .section-head p, #inside .section-head p, .section-head p { max-width: none !important; }
+  .mo-wh__text { margin: 0; color: var(--ink); font-family: var(--font-text) !important; font-size: 17px !important; line-height: 1.55 !important; letter-spacing: 0 !important; max-width: none !important; }
+  @media (max-width: 639px) { .mo-wh__text { font-size: 15px !important; line-height: 1.5 !important; } .hero.hero--product .hero__stage { margin: 12px 0 20px !important; } }
   .only-phone { display: none !important; }
   @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
   main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
@@ -212,9 +222,9 @@
 <main id="top">
   <section class="hero hero--product" data-enter aria-labelledby="hero-h">
     <div class="wrap"><div class="hero-text hero__in">
+      <p class="hero__kicker-line">Bezalel. The Mystery of the Artist's Lineage</p>
       <div class="hero__head">
         <div>
-          <p class="hero__kicker-line">Bezalel. The Mystery of the Artist's Lineage</p>
           <h1 id="hero-h">What the first artist in Scripture says about your calling</h1>
           <p class="hero__lead">An illustrated book by Ephraim Kalish on the four names of Bezalel's genealogy, read in the original Hebrew. Hardcover, $26.90.</p>
           <p class="hero__for">For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p>
@@ -260,9 +270,9 @@
     </div>
   </section>
 
-  <section class="section statement" id="question" data-moment="word-highlight" aria-label="The book's question">
+  <section class="section statement" id="question" aria-label="The book's question">
     <div class="wrap">
-      <p class="mo-wh__text">The Torah says almost nothing about Bezalel's life, yet it gives his genealogy <strong>three times</strong>, word for word. This book reads that genealogy name by name, as a key to an artist's calling.</p>
+      <p class="mo-wh__text">The Torah says almost nothing about Bezalel's life, yet it gives his genealogy three times, word for word. This book reads that genealogy name by name, as a key to an artist's calling.</p>
     </div>
   </section>
 
@@ -322,9 +332,9 @@
       <div class="grid grid--top fill">
         <ul class="rows rows--spec span-6">
           <li><span class="rows__name">Pages</span><span class="rows__value">24, in colour</span></li>
-          <li><span class="rows__name">Size</span><span class="rows__value">20.3 × 20.3 cm</span></li>
+          
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
-          <li><span class="rows__name">Language</span><span class="rows__value">English and Hebrew</span></li>
+          
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
           <li><span class="rows__name">Digital edition</span><span class="rows__value">PDF, $6.90</span></li>
         </ul>
