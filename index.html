@@ -92,11 +92,12 @@
   @media (max-width: 639px) { .excerpt { font-size: 17px; } .excerpt p { font-size: 17px !important; line-height: 1.55 !important; } .read__tabs button { padding: 0 14px; } }
   .hero__for { margin: 12px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 46ch; }
   @media (min-width: 1024px) {
-    .hero--product .hero__head { grid-template-rows: auto auto auto !important; }
-    .hero--product .hero__head h1 { grid-row: 1 / span 3 !important; }
-    .hero--product .hero__head .hero__lead { grid-row: 1 !important; }
-    .hero--product .hero__head .hero__for { grid-column: 9 / -1; grid-row: 2; margin: 0; max-width: none; }
-    .hero--product .hero__head > .btn-row { grid-row: 3 !important; }
+    .hero--product .hero__head { grid-template-rows: auto auto auto auto !important; }
+    .hero--product .hero__head .hero__kicker-line { grid-column: 1 / span 7; grid-row: 1; margin: 0; }
+    .hero--product .hero__head h1 { grid-row: 2 / span 3 !important; align-self: start !important; }
+    .hero--product .hero__head .hero__lead { grid-row: 2 !important; align-self: start !important; }
+    .hero--product .hero__head .hero__for { grid-column: 9 / -1; grid-row: 3; margin: 0; max-width: none; }
+    .hero--product .hero__head > .btn-row { grid-row: 4 !important; }
     .hero--product .hero__stage { width: min(100%, 880px) !important; margin-left: auto !important; margin-right: auto !important; height: auto !important; aspect-ratio: 1133 / 855; }
   }
   .author-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
@@ -110,6 +111,13 @@
   .lb__hint { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; color: #c9d1de; font: 400 13px/1.4 var(--font-text); pointer-events: none; }
   @media (min-width: 1024px) { .lb__hint { display: none; } }
   @media (max-width: 639px) { header.nav .nav__actions { display: none !important; } }
+  .hero__kicker-line { margin: 0 0 10px; font: 500 13px/1.4 var(--font-text); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .spirit { align-items: center; row-gap: 24px; }
+  .verse { margin: 0; font-family: var(--font-display); font-size: 21px; line-height: 1.5; }
+  .verse cite { display: block; margin-top: 10px; font: 500 13px/1.4 var(--font-text); font-style: normal; letter-spacing: .06em; text-transform: uppercase; opacity: .75; }
+  #lineage .section-head p { max-width: 62ch; margin-top: 10px; }
+  @media (max-width: 1023px) { .spirit { display: flex; flex-direction: column; align-items: stretch; } }
+  @media (max-width: 639px) { .verse { font-size: 18px; } .hero__kicker-line { font-size: 12px; } #lineage .section-head p, #inside .section-head p { font-size: 15px; line-height: 1.5; } }
   .only-phone { display: none !important; }
   @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
   main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
@@ -179,16 +187,16 @@
               <span class="t-card">Inside the book</span>
               <span class="t-small muted">Hebrew verse, English text, a full picture</span>
             </a>
-            <a class="menu-card span-4" href="#illustrations">
+            <a class="menu-card span-4" href="#spirit">
               <div class="panel"><img class="frame__img" src="assets/img/eagle-big.jpg" alt="Bezalel seated under the wing of a great eagle" loading="lazy"></div>
-              <span class="t-card">Illustrations</span>
-              <span class="t-small muted">Created for this book</span>
+              <span class="t-card">The first artist</span>
+              <span class="t-small muted">Filled with the Spirit of God</span>
             </a>
           </div>
         </div>
       </div>
       <div class="nav__item"><a class="nav__link" href="#read">Read</a></div>
-      <div class="nav__item"><a class="nav__link" href="#illustrations">Illustrations</a></div>
+      
       <div class="nav__item"><a class="nav__link" href="#edition">Edition</a></div>
       <div class="nav__item"><a class="nav__link" href="#author">Author</a></div>
     </nav>
@@ -206,8 +214,9 @@
     <div class="wrap"><div class="hero-text hero__in">
       <div class="hero__head">
         <div>
-          <h1 id="hero-h">An illustrated book on Bezalel's lineage</h1>
-          <p class="hero__lead">One name a chapter, read in the original Hebrew. Hardcover, $26.90.</p>
+          <p class="hero__kicker-line">Bezalel. The Mystery of the Artist's Lineage</p>
+          <h1 id="hero-h">What the first artist in Scripture says about your calling</h1>
+          <p class="hero__lead">An illustrated book by Ephraim Kalish on the four names of Bezalel's genealogy, read in the original Hebrew. Hardcover, $26.90.</p>
           <p class="hero__for">For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p>
         </div>
         <div class="btn-row"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
@@ -218,10 +227,24 @@
     </div></div>
   </section>
 
+  <section class="section ground-inverse" id="spirit" aria-labelledby="spirit-h">
+    <div class="wrap">
+      <div class="grid spirit">
+        <div class="span-6 stack-4 spirit__text">
+          <h2 id="spirit-h">The first artist filled with the Spirit of God</h2>
+          <blockquote class="verse">“And I have filled him with the spirit of God, in wisdom, and in understanding, and in knowledge, and in all manner of workmanship, to devise cunning works, to work in gold, and in silver, and in brass.” <cite>Exodus 31:3–4</cite></blockquote>
+          <p>Bezalel is the first person in Scripture whom God Himself calls filled with the Spirit of God, and the gift is given for work with the hands.</p>
+        </div>
+        <div class="pic pic--11 span-6 start-7"><img src="assets/img/eagle-big.jpg" alt="Bezalel seated against a wall under the wing of a great eagle, looking up" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
   <section class="section" id="lineage" aria-labelledby="lineage-h">
     <div class="wrap">
       <div class="section-head">
         <h2 id="lineage-h">Son of Uri, son of Hur, of Yehuda. <span class="muted">Exodus 31:2 names Bezalel this way.</span></h2>
+        <p>The book reads each name through its Hebrew sound, its meanings and its echoes elsewhere in Scripture. The connections drawn are the author's own reading.</p>
       </div>
       <div class="grid grid--top fill">
         <ul class="rows span-6">
@@ -247,7 +270,7 @@
     <div class="wrap">
       <div class="section-head">
         <h2 id="inside-h">A full-page picture beside every chapter</h2>
-        <p>Each chapter opens on a Hebrew verse, then the English text, with Scripture cited by book and verse.</p>
+        <p>Each chapter opens on a Hebrew verse, then the English text beside a full-page illustration created for this book. Tap a spread to read it.</p>
       </div>
       <div class="grid fill">
         <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-bezalel-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></button>
@@ -261,28 +284,28 @@
   <section class="section ground-surface" id="read" aria-labelledby="read-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="read-h">Read a page from each chapter</h2>
+        <h2 id="read-h">Read an excerpt from each chapter</h2>
       </div>
       <div class="read">
         <div class="read__tabs" role="tablist" aria-label="Chapters"><button type="button" role="tab" id="tab-bezalel" aria-controls="panel-bezalel" aria-selected="true" tabindex="0">Bezalel</button><button type="button" role="tab" id="tab-uri" aria-controls="panel-uri" aria-selected="false" tabindex="-1">Uri</button><button type="button" role="tab" id="tab-hur" aria-controls="panel-hur" aria-selected="false" tabindex="-1">Hur</button><button type="button" role="tab" id="tab-yehuda" aria-controls="panel-yehuda" aria-selected="false" tabindex="-1">Yehuda</button></div>
         <div class="excerpt" role="tabpanel" id="panel-bezalel" aria-labelledby="tab-bezalel">
-<p class="excerpt__ch">Bezalel. In the Shadow of God</p>
+<p class="excerpt__ch">From the chapter Bezalel. In the Shadow of God</p>
 <p>In the language of the Tanakh, the root TZLL (<span class="he" lang="he">צלל</span>) has several meanings: TZEL (<span class="he" lang="he">צֵל</span>, lit. shadow); TZALAL (<span class="he" lang="he">צָלַל</span>, lit. to plunge, to dive). From the same root comes METZOLAH (<span class="he" lang="he">מְצוֹלָה</span>, lit. the depth of the sea).</p>
 <p>In this reading, the shadow of the Most High is no longer a flat silhouette. It becomes a depth one enters, like water, not merely shade under which one stands.</p>
 <p>That depth is not silent. It calls forth a response: trembling. The same root, in another form, appears as TZALELU (<span class="he" lang="he">צָלְלוּ</span>, lit. trembled, shook at a sound) in the prophet: “my lips quivered at the voice” (Hab. 3:16). The shadow is not only a quiet refuge; it is a place where the voice reaches a person, and the whole self trembles as that voice draws near.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-uri" aria-labelledby="tab-uri" hidden>
-<p class="excerpt__ch">Uri. Arise, Shine</p>
+<p class="excerpt__ch">From the chapter Uri. Arise, Shine</p>
 <p>The name URI (<span class="he" lang="he">אוּרִי</span>, lit. my light) is written with the same four letters as one of the most piercing commands in the Tanakh: KUMI ORI KI VA OREKH (<span class="he" lang="he">קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ</span>), “Arise, shine; for thy light is come” (Isa. 60:1).</p>
 <p>Here ORI (<span class="he" lang="he">אוֹרִי</span>, lit. shine) is an imperative verb. In the ancient Hebrew biblical text, where vowels were not written, the name of Bezalel’s father and this prophetic command appear as the same four letters. The name can therefore also be read as containing a command: arise, shine.</p>
 <p>Bezalel is the answer to that imperative.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-hur" aria-labelledby="tab-hur" hidden>
-<p class="excerpt__ch">Hur. The Path of Purity</p>
+<p class="excerpt__ch">From the chapter Hur. The Path of Purity</p>
 <p>In antiquity, producing snow-white linen was a long and labor-intensive process. First, the fabric was boiled repeatedly in an alkaline solution called NEDJRI in Egyptian, a word translated as “pure” or “divine.”</p>
 <p>Then the fabric was washed again and again, spread out in the sun, moistened with water, and left outdoors in the light. This cycle was repeated many times, so bleaching linen took weeks, and sometimes months.</p>
 <p>The craftsman’s task was not to make the linen white by adding color. It was to remove everything that obscured the whiteness already present in it.</p>
 </div><div class="excerpt" role="tabpanel" id="panel-yehuda" aria-labelledby="tab-yehuda" hidden>
-<p class="excerpt__ch">Yehuda. The Tribe of Praise</p>
-<p class="letters" lang="he" aria-label="Yehuda in Hebrew: yud, he, vav, dalet, he"><span>ה</span><b>ד</b><span>ו</span><span>ה</span><span>י</span></p>
+<p class="excerpt__ch">From the chapter Yehuda. The Tribe of Praise</p>
+<p class="letters" lang="he" dir="rtl" aria-label="Yehuda in Hebrew, with the letter dalet marked"><span>י</span><span>ה</span><span>ו</span><b>ד</b><span>ה</span></p>
 <p>Yehuda (<span class="he" lang="he">יְהוּדָה</span>) is unique in the way its letters preserve the order of the great Name. Many names in Scripture contain an element of the name of the Most High. But no other name places these four letters in exactly the same order as the unutterable Name itself, with only one letter between them: DALET (<span class="he" lang="he">ד</span>), the first letter of DAM (<span class="he" lang="he">דָּם</span>, lit. blood), here representing a human being.</p>
 <p>The name Yehuda can therefore be read as a human being of flesh and blood immersed in the glory of God, surrounded by the name of the Most High, and empowered by the Creator.</p>
 </div>
@@ -290,29 +313,16 @@
     </div>
   </section>
 
-  <section class="section ground-inverse" id="illustrations" aria-labelledby="ill-h">
-    <div class="wrap">
-      <div class="grid ts">
-        <div class="ts__side span-5">
-          <div class="stack-4">
-            <h2 id="ill-h">Illustrations made for this book</h2>
-            <p>Every illustration was created for this book, from the eagle across the cover to the blue banners of Yehuda's camp.</p>
-          </div>
-        </div>
-        <div class="pic pic--11 ts__big span-6 start-7"><img src="assets/img/eagle-big.jpg" alt="Bezalel seated against a wall under the wing of a great eagle, looking up" loading="lazy" data-source="client" data-subject="illustration, Bezalel and the eagle"></div>
-      </div>
-    </div>
-  </section>
 
   <section class="section" id="edition" aria-labelledby="edition-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="edition-h">Hardcover, 8 by 8 inches</h2>
+        <h2 id="edition-h">Hardcover, 8 × 8 inches</h2>
       </div>
       <div class="grid grid--top fill">
         <ul class="rows rows--spec span-6">
           <li><span class="rows__name">Pages</span><span class="rows__value">24, in colour</span></li>
-          <li><span class="rows__name">Size</span><span class="rows__value">20 × 20 cm</span></li>
+          <li><span class="rows__name">Size</span><span class="rows__value">20.3 × 20.3 cm</span></li>
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Language</span><span class="rows__value">English and Hebrew</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
@@ -330,7 +340,7 @@
           <h2 id="author-h">Ephraim Kalish, artist and author</h2>
           <p>An Israeli artist and filmmaker behind the TORAART project. He has studied Bezalel for more than thirty years and writes about him as one artist about another.</p>
           <p>His film Bezalel tells the same story on screen.</p>
-          <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Watch the film</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Write to the author</a></p>
+          <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Get the film</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Write to the author</a></p>
         </div>
         <div class="frame frame--photo frame--fill span-6 start-7">
           <img class="frame__img" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" style="object-position: 50% 30%" loading="lazy" data-source="client" data-subject="portrait of the author">
