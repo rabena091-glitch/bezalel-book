@@ -75,6 +75,18 @@
   }
   .rows > li > p { grid-column: 1 / -1; max-width: none; text-wrap: wrap; }
   main p { text-wrap: wrap; }
+  .read { max-width: 680px; }
+  .read__tabs { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+  .read__tabs button { font: 500 15px/1 var(--font-text); min-height: 44px; padding: 0 18px; border-radius: 999px; border: 1px solid color-mix(in oklab, var(--ink) 22%, transparent); background: transparent; color: var(--ink); cursor: pointer; }
+  .read__tabs button[aria-selected="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .read__tabs button:focus-visible { outline: 2px solid var(--action); outline-offset: 2px; }
+  .excerpt { display: flex; flex-direction: column; gap: 14px; font-family: var(--font-display); font-size: 19px; line-height: 1.55; }
+  .excerpt p { margin: 0; }
+  .excerpt__ch { font-family: var(--font-text) !important; font-size: 13px !important; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  .excerpt .he { color: var(--p-accent); font-size: 1.05em; }
+  .letters { display: flex; gap: 6px; font-family: "Frank Ruhl Libre", serif; font-size: 52px !important; line-height: 1 !important; color: var(--ink); }
+  .letters b { font-weight: 400; color: var(--p-accent); }
+  @media (max-width: 639px) { .excerpt { font-size: 17px; } .excerpt p { font-size: 17px !important; line-height: 1.55 !important; } .read__tabs button { padding: 0 14px; } }
   .only-phone { display: none !important; }
   @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
   main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
@@ -152,6 +164,7 @@
           </div>
         </div>
       </div>
+      <div class="nav__item"><a class="nav__link" href="#read">Read</a></div>
       <div class="nav__item"><a class="nav__link" href="#illustrations">Illustrations</a></div>
       <div class="nav__item"><a class="nav__link" href="#edition">Edition</a></div>
       <div class="nav__item"><a class="nav__link" href="#author">Author</a></div>
@@ -216,6 +229,39 @@
         <div class="pic pic--spread span-4"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></div>
         <div class="pic pic--spread span-4"><img src="assets/img/spread-hur.jpg" alt="Pages 12 and 13: Hur holding white linen, beside the chapter Hur. The Path of Purity" loading="lazy" data-source="client" data-subject="spread, chapter on Hur"></div>
         <div class="pic pic--spread span-4"><img src="assets/img/spread-yehuda.jpg" alt="Pages 20 and 21: the camp of Yehuda under blue banners, beside the chapter Yehuda. The Tribe of Praise" loading="lazy" data-source="client" data-subject="spread, chapter on Yehuda"></div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section ground-surface" id="read" aria-labelledby="read-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="read-h">Read a page from each chapter</h2>
+      </div>
+      <div class="read">
+        <div class="read__tabs" role="tablist" aria-label="Chapters"><button type="button" role="tab" id="tab-bezalel" aria-controls="panel-bezalel" aria-selected="true" tabindex="0">Bezalel</button><button type="button" role="tab" id="tab-uri" aria-controls="panel-uri" aria-selected="false" tabindex="-1">Uri</button><button type="button" role="tab" id="tab-hur" aria-controls="panel-hur" aria-selected="false" tabindex="-1">Hur</button><button type="button" role="tab" id="tab-yehuda" aria-controls="panel-yehuda" aria-selected="false" tabindex="-1">Yehuda</button></div>
+        <div class="excerpt" role="tabpanel" id="panel-bezalel" aria-labelledby="tab-bezalel">
+<p class="excerpt__ch">Bezalel. In the Shadow of God</p>
+<p>In the language of the Tanakh, the root TZLL (<span class="he" lang="he">צלל</span>) has several meanings: TZEL (<span class="he" lang="he">צֵל</span>, lit. shadow); TZALAL (<span class="he" lang="he">צָלַל</span>, lit. to plunge, to dive). From the same root comes METZOLAH (<span class="he" lang="he">מְצוֹלָה</span>, lit. the depth of the sea).</p>
+<p>In this reading, the shadow of the Most High is no longer a flat silhouette. It becomes a depth one enters, like water, not merely shade under which one stands.</p>
+<p>That depth is not silent. It calls forth a response: trembling. The same root, in another form, appears as TZALELU (<span class="he" lang="he">צָלְלוּ</span>, lit. trembled, shook at a sound) in the prophet: “my lips quivered at the voice” (Hab. 3:16). The shadow is not only a quiet refuge; it is a place where the voice reaches a person, and the whole self trembles as that voice draws near.</p>
+</div><div class="excerpt" role="tabpanel" id="panel-uri" aria-labelledby="tab-uri" hidden>
+<p class="excerpt__ch">Uri. Arise, Shine</p>
+<p>The name URI (<span class="he" lang="he">אוּרִי</span>, lit. my light) is written with the same four letters as one of the most piercing commands in the Tanakh: KUMI ORI KI VA OREKH (<span class="he" lang="he">קוּמִי אוֹרִי כִּי בָא אוֹרֵךְ</span>), “Arise, shine; for thy light is come” (Isa. 60:1).</p>
+<p>Here ORI (<span class="he" lang="he">אוֹרִי</span>, lit. shine) is an imperative verb. In the ancient Hebrew biblical text, where vowels were not written, the name of Bezalel’s father and this prophetic command appear as the same four letters. The name can therefore also be read as containing a command: arise, shine.</p>
+<p>Bezalel is the answer to that imperative.</p>
+</div><div class="excerpt" role="tabpanel" id="panel-hur" aria-labelledby="tab-hur" hidden>
+<p class="excerpt__ch">Hur. The Path of Purity</p>
+<p>In antiquity, producing snow-white linen was a long and labor-intensive process. First, the fabric was boiled repeatedly in an alkaline solution called NEDJRI in Egyptian, a word translated as “pure” or “divine.”</p>
+<p>Then the fabric was washed again and again, spread out in the sun, moistened with water, and left outdoors in the light. This cycle was repeated many times, so bleaching linen took weeks, and sometimes months.</p>
+<p>The craftsman’s task was not to make the linen white by adding color. It was to remove everything that obscured the whiteness already present in it.</p>
+</div><div class="excerpt" role="tabpanel" id="panel-yehuda" aria-labelledby="tab-yehuda" hidden>
+<p class="excerpt__ch">Yehuda. The Tribe of Praise</p>
+<p class="letters" lang="he" aria-label="Yehuda in Hebrew: yud, he, vav, dalet, he"><span>ה</span><b>ד</b><span>ו</span><span>ה</span><span>י</span></p>
+<p>Yehuda (<span class="he" lang="he">יְהוּדָה</span>) is unique in the way its letters preserve the order of the great Name. Many names in Scripture contain an element of the name of the Most High. But no other name places these four letters in exactly the same order as the unutterable Name itself, with only one letter between them: DALET (<span class="he" lang="he">ד</span>), the first letter of DAM (<span class="he" lang="he">דָּם</span>, lit. blood), here representing a human being.</p>
+<p>The name Yehuda can therefore be read as a human being of flesh and blood immersed in the glory of God, surrounded by the name of the Most High, and empowered by the Creator.</p>
+</div>
       </div>
     </div>
   </section>
@@ -285,7 +331,7 @@
           <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
           <p class="footer__lede">Books and films by Ephraim Kalish</p>
         </div>
-        <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="#lineage">Four names</a></li><li><a href="#inside">Inside</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="#lineage">Four names</a></li><li><a href="#inside">Inside</a></li><li><a href="#read">Read a page</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Illustrations</h3><ul><li><a href="#illustrations">Pictures</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Edition</h3><ul><li><a href="#edition">Details</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">Etsy shop</a></li></ul></div>
         <div class="span-2 footer__col"><h3>Author</h3><ul><li><a href="#author">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
@@ -298,6 +344,11 @@
   </div>
 </footer>
 
+<script>
+(function(){var l=document.querySelector('.read__tabs');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
+function sel(b){t.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
+t.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var n=t[(i+k+t.length)%t.length];sel(n);n.focus();e.preventDefault();}});});})();
+</script>
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
 <script type="module" src="assets/layout/layout.js"></script>
