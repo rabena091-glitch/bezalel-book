@@ -9,8 +9,8 @@
 <meta property="og:title" content="Bezalel: an illustrated book on the first artist of the Bible">
 <meta property="og:description" content="A 24-page hardcover by Ephraim Kalish on the names in Bezalel's genealogy.">
 <meta property="og:image" content="https://rabena091-glitch.github.io/bezalel-book/share.jpg">
-<meta property="og:image:width" content="1133">
-<meta property="og:image:height" content="855">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="1150">
 <meta property="og:url" content="https://rabena091-glitch.github.io/bezalel-book/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -280,6 +280,26 @@
   /* Hebrew line sits close above its English heading */
   main #lineage p.he-mark { margin-bottom: -12px !important; }
   main #spirit p.he-mark { margin-bottom: -10px !important; }
+  /* square cover on top */
+  .hero.hero--product .hero__stage { aspect-ratio: 1 / 1 !important; width: min(100%, 640px) !important; height: auto !important; }
+  .hero.hero--product .hero__stage > img { object-fit: cover; object-position: 50% 50%; }
+  @media (max-width: 639px) { .hero.hero--product .hero__stage { width: 100% !important; } }
+  /* no strip under the picture on a phone */
+  @media (max-width: 1023px) { main #spirit.section { padding-bottom: 0 !important; } #spirit .spirit > .pic { margin-bottom: 0 !important; } }
+  /* edition: details and buttons only */
+  #edition .edition__col { grid-column: 1 / -1 !important; width: 100%; max-width: 640px; }
+  /* closing: same pair of buttons; PDF in light grey here */
+  footer.closing .closing__buy { margin-top: 8px; }
+  footer.closing .btn--pdf { background: #e4e7ec !important; border-color: #e4e7ec !important; color: #34435a !important; }
+  footer.closing .btn--pdf:hover { background: #d3d8df !important; }
+  /* desktop: Hebrew name at the right edge of the page, larger spreads */
+  @media (min-width: 1024px) {
+    .read { max-width: none !important; }
+    .read .excerpt > p:not(.he-mark):not(.excerpt__ch) { max-width: 720px; }
+    .read .excerpt { position: relative; }
+    #inside .grid { grid-template-columns: 1fr !important; justify-items: center; row-gap: 32px; }
+    #inside .grid > .pic--spread { grid-column: 1 / -1 !important; width: min(100%, 1000px) !important; }
+  }
 </style>
 </head>
 <body>
@@ -342,7 +362,7 @@
         
       </div>
       <div class="hero__stage">
-        <img src="assets/img/cover-hero.jpg" alt="The cover: an eagle in flight over the title Bezalel in Hebrew and English, with the author's name" fetchpriority="high" data-source="client" data-subject="the book's cover">
+        <img src="assets/img/cover-square.jpg" alt="The cover: an eagle in flight over the title Bezalel in Hebrew and English, with the author's name" fetchpriority="high" data-source="client" data-subject="the book's cover">
       </div>
     </div></div>
   </section>
@@ -448,7 +468,6 @@
         </ul>
         <div class="edition__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--primary btn--pdf" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
         </div>
-        <div class="pic pic--43 span-6 start-7"><img src="assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" loading="lazy" data-source="client" data-subject="the hardcover"></div>
       </div>
     </div>
   </section>
@@ -471,18 +490,17 @@
   <div class="wrap">
     <div class="closing__cta close--type">
       <div class="section-head">
-        <h2 id="close-h">Order Bezalel in hardcover</h2>
-        <p>$26.90 through AmendesignShop on Etsy. <a class="link" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF for $6.90</a></p>
+        <h2 id="close-h">Order Bezalel</h2>
+        <p>Hardcover $26.90, PDF $6.90, through AmendesignShop on Etsy.</p>
       </div>
-      <a class="btn btn--primary btn--xl btn--wide" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+      <div class="edition__buy closing__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--primary btn--pdf" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
     </div>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
-          <p class="footer__lede">Books and films by Ephraim Kalish</p>
         </div>
-        <div class="span-4 footer__col"><h3>The author</h3><ul><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Ephraim Kalish on Facebook</a></li><li><a href="#author">About the author</a></li></ul></div>
+        <div class="span-4 footer__col"><h3>The author</h3><ul><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Ephraim Kalish on Facebook</a></li></ul></div>
         <div class="span-4 footer__col"><h3>More by Ephraim Kalish</h3><ul><li><a href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Books and films</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">AmendesignShop on Etsy</a></li></ul></div>
       </div>
       <div class="footer__legal">
