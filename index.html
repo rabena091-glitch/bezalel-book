@@ -20,7 +20,7 @@
 <meta name="page-type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400..700&family=Hanken+Grotesk:wght@400..600&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400..700&family=Frank+Ruhl+Libre:wght@400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/system.css">
 <link rel="stylesheet" href="assets/ui/cards.css">
 <link rel="stylesheet" href="assets/motion/motion.css">
@@ -170,6 +170,23 @@
     .close--type .btn--xl { min-height: 52px; font-size: 18px; }
     .closing__links { margin-top: 40px; }
   }
+</style>
+<style>
+  /* one typeface, one body size, headings bold and larger (client's request) */
+  :root { --font-display: "Hanken Grotesk", system-ui, sans-serif; --display-weight: 600; --display-tracking: -0.01em; --display-tracking-xl: -0.015em; --body: 17px; --h2s: 26px; --h1s: 38px; }
+  @media (max-width: 639px) { :root { --body: 15px; --h2s: 21px; --h1s: 27px; } }
+  body, main p, main li, main dd, main dt, .rows__name, .rows__value, .hero .hero__lead, .hero__for, .mo-wh__text, .excerpt, .excerpt p, .verse, .footer__lede, .closing p, .closing a:not(.btn), .footer__col a, .t-small {
+    font-family: var(--font-text) !important; font-size: var(--body) !important; line-height: 1.55 !important; letter-spacing: 0 !important; font-weight: 400;
+  }
+  .rows__name { font-weight: 600 !important; }
+  .hero h1, #hero-h { font-family: var(--font-text) !important; font-weight: 700 !important; font-size: var(--h1s) !important; line-height: 1.15 !important; letter-spacing: -0.015em !important; }
+  main h2, footer h2 { font-family: var(--font-text) !important; font-weight: 700 !important; font-size: var(--h2s) !important; line-height: 1.25 !important; letter-spacing: -0.01em !important; }
+  main h2 .muted { font-weight: 400 !important; }
+  .verse { font-style: normal; margin-top: 8px !important; }
+  .verse cite, .excerpt__ch, .hero__kicker-line, .footer__col h3 { font-family: var(--font-text) !important; font-size: 12px !important; line-height: 1.4 !important; font-weight: 600 !important; letter-spacing: .06em !important; text-transform: uppercase; }
+  .nav__logo, .closing .nav__logo { font-family: var(--font-text) !important; font-weight: 700; }
+  .btn--xl { font-family: var(--font-text) !important; font-size: 18px !important; }
+  #lineage .rows__value { font-size: 20px !important; }
 </style>
 </head>
 <body>
