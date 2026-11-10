@@ -63,6 +63,16 @@
   /* compact layout, phone first (client's request): sections sized by their content */
   .pic--spread { aspect-ratio: auto; background: transparent; border-radius: 0; }
   .pic--spread > img { height: auto; }
+  html, body { overflow-x: clip; }
+  .hero--product .hero__stage { aspect-ratio: 1133 / 855; flex: none; min-height: 0; width: min(100%, 960px); margin-inline: auto; border-radius: var(--r-lg); background: #3e5579; }
+  .hero__stage > img { object-fit: cover; object-position: 50% 50%; }
+  .hero.hero--product { height: auto !important; min-height: 0 !important; }
+  @media (max-width: 639px) {
+    main > section.section, footer.closing { padding-top: 28px !important; padding-bottom: 28px !important; }
+    main > section.statement { padding-top: 12px !important; padding-bottom: 12px !important; }
+    .section-head { margin-bottom: 16px !important; }
+    .hero--product .hero__stage { width: 100vw; border-radius: 0; margin-top: 20px; }
+  }
   .only-phone { display: none !important; }
   @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
   main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
@@ -160,7 +170,7 @@
         <div class="btn-row"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
       </div>
       <div class="hero__stage">
-        <img class="only-phone" src="assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" fetchpriority="high"><img class="only-wide" src="assets/img/book-wrap.jpg" alt="The book's full cover laid open: an eagle in flight across the front and back, the title in Hebrew and English" style="--ly-pos: 50% 50%" fetchpriority="high" data-source="client" data-subject="the book's cover">
+        <img src="assets/img/cover-hero.jpg" alt="The cover: an eagle in flight over the title Bezalel in Hebrew and English, with the author's name" fetchpriority="high" data-source="client" data-subject="the book's cover">
       </div>
     </div></div>
   </section>
@@ -206,12 +216,11 @@
   <section class="section ground-inverse" id="illustrations" aria-labelledby="ill-h">
     <div class="wrap">
       <div class="grid ts">
-        <div class="ts__side span-6">
+        <div class="ts__side span-5">
           <div class="stack-4">
             <h2 id="ill-h">Illustrations made for this book</h2>
             <p>Every illustration was created for this book, from the eagle across the cover to the blue banners of Yehuda's camp.</p>
           </div>
-          <div class="pic pic--11 ts__small"><img src="assets/img/yehuda-detail.jpg" alt="Men of Yehuda under blue banners before a cliff" loading="lazy" data-source="client" data-subject="illustration, the camp of Yehuda"></div>
         </div>
         <div class="pic pic--11 ts__big span-6 start-7"><img src="assets/img/eagle-big.jpg" alt="Bezalel seated against a wall under the wing of a great eagle, looking up" loading="lazy" data-source="client" data-subject="illustration, Bezalel and the eagle"></div>
       </div>
