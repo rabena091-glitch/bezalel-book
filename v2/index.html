@@ -255,8 +255,11 @@
   .lb__hint { bottom: calc(46px + env(safe-area-inset-bottom, 0px)) !important; }
   @media (max-width: 1023px) { .lb img { height: calc(100svh - 160px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)) !important; } }
   .edition__col { display: flex; flex-direction: column; gap: 24px; }
-  .edition__buy { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 24px; }
-  @media (max-width: 639px) { .edition__buy .btn { width: 100%; justify-content: center; } }
+  .edition__buy { display: flex; flex-direction: column; align-items: stretch; gap: 10px; max-width: 340px; }
+  .edition__buy .btn { width: 100%; justify-content: center; }
+  .edition__buy .btn--pdf { background: #4d5e78 !important; border-color: #4d5e78 !important; color: #fff !important; }
+  .edition__buy .btn--pdf:hover { background: #3f4f67 !important; }
+  @media (max-width: 639px) { .edition__buy { max-width: none; } }
 </style>
 </head>
 <body>
@@ -423,7 +426,7 @@
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
         </ul>
-        <div class="edition__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="link" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF</a></div>
+        <div class="edition__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--primary btn--pdf" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
         </div>
         <div class="pic pic--43 span-6 start-7"><img src="../assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" loading="lazy" data-source="client" data-subject="the hardcover"></div>
       </div>
