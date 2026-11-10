@@ -109,7 +109,7 @@
   .lb__close { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px)); z-index: 101; width: 48px; height: 48px; border-radius: 999px; border: 0; background: #fff; color: #13284a; font: 500 26px/1 var(--font-text); cursor: pointer; }
   .lb__hint { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; color: #c9d1de; font: 400 13px/1.4 var(--font-text); pointer-events: none; }
   @media (min-width: 1024px) { .lb__hint { display: none; } }
-  @media (max-width: 639px) { header.nav .nav__actions { display: none !important; } }
+
   .hero__kicker-line { margin: 0 0 10px; font: 500 13px/1.4 var(--font-text); letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
   .spirit { align-items: center; row-gap: 24px; }
   .verse { margin: 0; font-family: var(--font-display); font-size: 21px; line-height: 1.5; }
@@ -314,6 +314,12 @@
     footer.closing .footer__legal { margin-top: 26px !important; padding-top: 16px !important; font-size: 13px; color: rgba(255,255,255,.55); }
     footer.closing { padding-top: 32px !important; padding-bottom: 28px !important; }
   }
+  /* header Shop button on phones too, same terracotta as the order button */
+  @media (max-width: 1023px) {
+    header.nav .nav__actions { display: flex !important; margin-left: auto; margin-right: 10px; }
+    header.nav .nav__actions .btn { min-height: 38px !important; padding: 0 18px !important; font-size: 15px !important; }
+  }
+  header.nav .nav__actions .btn { background: #b8501c !important; border-color: #b8501c !important; color: #fff !important; }
 </style>
 </head>
 <body>
@@ -355,7 +361,7 @@
       <div class="nav__item"><a class="nav__link" href="#author">Author</a></div>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book</a>
+      <a class="btn btn--primary" href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Shop</a>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
       <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
