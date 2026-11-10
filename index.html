@@ -263,6 +263,20 @@
   .read__tabs button { padding: 0 14px; }
   .read__tabs button[aria-selected="true"] { background: #4d5e78 !important; border-color: #4d5e78 !important; color: #fff !important; }
   @media (max-width: 380px) { .read__tabs button { padding: 0 11px; font-size: 14px; } }
+  /* Hebrew chapter names exactly the size of רוּחַ אֱלֹהִים; tight under the tabs */
+  :root { --hem: 44px; }
+  @media (min-width: 1024px) { :root { --hem: 64px; } }
+  @media (max-width: 639px) { :root { --hem: 38px; } }
+  main #spirit p.he-mark, main .excerpt p.he-mark { font-size: var(--hem) !important; line-height: 1.15 !important; margin: 0 !important; }
+  .read__tabs { margin-bottom: 4px !important; }
+  .read .excerpt { gap: 10px; }
+  /* the verse of Exodus 31:2 in the terracotta of the buttons */
+  main #lineage p.he-mark { color: #b8501c !important; }
+  /* picture on the left, words on the right */
+  @media (min-width: 1024px) {
+    #spirit .spirit__text { grid-column: 7 / span 6 !important; grid-row: 1; }
+    #spirit .spirit > .pic { grid-column: 1 / span 6 !important; grid-row: 1; }
+  }
 </style>
 </head>
 <body>
