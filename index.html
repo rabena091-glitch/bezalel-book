@@ -193,6 +193,14 @@
   .author__head h2 { margin: 0 !important; }
   .author__pic { flex: none; width: 200px; max-width: 50%; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 30%; border-radius: var(--r-lg); display: block; }
   #edition .rows__value { white-space: nowrap !important; max-width: none !important; }
+  .names { display: flex; flex-direction: column; gap: 16px; }
+  .names__pic { max-width: 900px; border-radius: var(--r-lg); overflow: hidden; }
+  .names__pic img { display: block; width: 100%; height: auto; }
+  .names__tiles { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; max-width: 900px; }
+  .names__tiles li { display: flex; flex-direction: column; gap: 2px; padding: 12px 14px; border-radius: var(--r-md); background: var(--p-surface); }
+  .names__tiles b { font-weight: 700; font-size: var(--body); }
+  .names__tiles span { font-size: 14px; line-height: 1.4; color: var(--muted); }
+  @media (max-width: 639px) { .names__tiles { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; } }
 </style>
 </head>
 <body>
@@ -249,10 +257,10 @@
       <div class="hero__head">
         <div>
           <h1 id="hero-h">What the first artist in Scripture says about your calling</h1>
-          <p class="hero__lead">An illustrated book by Ephraim Kalish on the four names of Bezalel's genealogy, read in the original Hebrew. Hardcover, $26.90.</p>
+          <p class="hero__lead">The Bible tells us almost nothing about Bezalel's life, yet it repeats his genealogy three times. This illustrated book by Ephraim Kalish reads those four names in the original Hebrew.</p>
           <p class="hero__for">For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p>
         </div>
-        <div class="btn-row"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+        <div class="btn-row"><a class="btn btn--primary" href="#inside">Look inside<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
       </div>
       <div class="hero__stage">
         <img src="assets/img/cover-hero.jpg" alt="The cover: an eagle in flight over the title Bezalel in Hebrew and English, with the author's name" fetchpriority="high" data-source="client" data-subject="the book's cover">
@@ -276,33 +284,25 @@
   <section class="section" id="lineage" aria-labelledby="lineage-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="lineage-h">Son of Uri, son of Hur, of Yehuda. <span class="muted">Exodus 31:2 names Bezalel this way.</span></h2>
-        <p>The book reads each name through its Hebrew sound, its meanings and its echoes elsewhere in Scripture. The connections drawn are the author's own reading.</p>
+        <h2 id="lineage-h">Bezalel, son of Uri, son of Hur, of Yehuda</h2>
+        <p>This is how Exodus 31:2 names the artist. The book gives one chapter to each name and reads it through its Hebrew sound, its meanings and its echoes elsewhere in Scripture. The connections drawn are the author's own reading.</p>
       </div>
-      <div class="grid grid--top fill">
-        <ul class="rows span-6">
-          <li><span class="rows__name">Bezalel</span><p>In the shadow of God: the word TZEL, shadow and shelter, inside the artist's name.</p><span class="rows__value he" lang="he">בְּצַלְאֵל</span></li>
-          <li><span class="rows__name">Uri</span><p>The father's name, read as light beside the shadow.</p><span class="rows__value he" lang="he">אוּרִי</span></li>
-          <li><span class="rows__name">Hur</span><p>The path of purity: white linen, and the freedom that the same root carries.</p><span class="rows__value he" lang="he">חוּר</span></li>
-          <li><span class="rows__name">Yehuda</span><p>The tribe of praise, the lion and the blue banner at the head of the camp.</p><span class="rows__value he" lang="he">יְהוּדָה</span></li>
+      <div class="names">
+        <div class="names__pic"><img src="assets/img/four-names.jpg" alt="Four men of the genealogy side by side: one with the lion banner of Yehuda, an old man with white linen, a man with a torch, and Bezalel in a work apron, the four names in Hebrew beneath" loading="lazy" data-source="client" data-subject="illustration of the four names"></div>
+        <ul class="names__tiles">
+          <li><b>Bezalel</b><span>In the shadow of God</span></li>
+          <li><b>Uri</b><span>My light</span></li>
+          <li><b>Hur</b><span>Purity and freedom</span></li>
+          <li><b>Yehuda</b><span>Praising God</span></li>
         </ul>
-        <div class="frame frame--photo frame--fill span-6 start-7">
-          <img class="frame__img" src="assets/img/four-names.jpg" alt="Four men of the genealogy side by side: one with the lion banner of Yehuda, an old man with white linen, a man with a torch, and Bezalel in a work apron, the four names in Hebrew beneath" loading="lazy" data-source="client" data-subject="illustration of the four names">
-        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section statement" id="question" aria-label="The book's question">
-    <div class="wrap">
-      <p class="mo-wh__text">The Torah says almost nothing about Bezalel's life, yet it gives his genealogy three times, word for word. This book reads that genealogy name by name, as a key to an artist's calling.</p>
     </div>
   </section>
 
   <section class="section" id="inside" aria-labelledby="inside-h">
     <div class="wrap">
       <div class="section-head">
-        <h2 id="inside-h">A full-page picture beside every chapter</h2>
+        <h2 id="inside-h">Inside the book</h2>
         <p>Each chapter opens on a Hebrew verse, then the English text beside a full-page illustration created for this book. Tap a spread to read it.</p>
       </div>
       <div class="grid fill">
