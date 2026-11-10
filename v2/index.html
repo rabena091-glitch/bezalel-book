@@ -240,6 +240,12 @@
   main p.he-mark, main .excerpt p.he-mark, #lineage p.he-mark { text-align: right !important; direction: rtl; }
   footer.closing .btn--primary { background: #b8501c !important; color: #fff !important; border-color: #b8501c !important; }
   footer.closing .btn--primary:hover { background: #a2461a !important; }
+  .lb__bar { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); z-index: 101; display: flex; align-items: center; justify-content: center; gap: 20px; pointer-events: none; }
+  .lb__nav { pointer-events: auto; width: 52px; height: 52px; border-radius: 999px; border: 0; background: #fff; color: #13284a; font: 400 32px/1 var(--font-text); cursor: pointer; display: flex; align-items: center; justify-content: center; padding-bottom: 4px; }
+  .lb__count { color: #fff; font: 500 15px/1 var(--font-text); min-width: 44px; text-align: center; }
+  .lb__hint { bottom: calc(80px + env(safe-area-inset-bottom, 0px)) !important; }
+  @media (min-width: 1024px) { .lb__bar { bottom: 24px; } }
+  @media (max-width: 1023px) { .lb { align-items: flex-start; padding-top: calc(76px + env(safe-area-inset-top, 0px)); } .lb img { height: calc(100svh - 200px - env(safe-area-inset-top, 0px) - env(safe-area-inset-bottom, 0px)); margin: 0 auto; } }
 </style>
 </head>
 <body>
@@ -457,15 +463,17 @@
 function sel(b){t.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
 t.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var n=t[(i+k+t.length)%t.length];sel(n);n.focus();e.preventDefault();}});});})();
 </script>
-<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Spread"><button type="button" class="lb__close" aria-label="Close">×</button><img alt=""><p class="lb__hint">Swipe sideways to read both pages</p></div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Spread"><button type="button" class="lb__close" aria-label="Close">×</button><img alt=""><div class="lb__bar"><button type="button" class="lb__nav" data-step="-1" aria-label="Previous spread">‹</button><span class="lb__count" aria-live="polite"></span><button type="button" class="lb__nav" data-step="1" aria-label="Next spread">›</button></div><p class="lb__hint">Swipe sideways to read both pages</p></div>
 <script>
-(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img'),last;
-function open(b){last=b;im.src=b.dataset.full;im.alt=b.querySelector('img').alt;lb.hidden=false;document.body.style.overflow='hidden';lb.scrollLeft=0;lb.querySelector('.lb__close').focus();}
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img'),cnt=lb.querySelector('.lb__count'),bs=[].slice.call(document.querySelectorAll('button.zoom')),cur=0,last;
+function show(i){cur=(i+bs.length)%bs.length;var b=bs[cur];im.src=b.dataset.full;im.alt=b.querySelector('img').alt;cnt.textContent=(cur+1)+' / '+bs.length;lb.scrollLeft=0;}
+function open(i){last=bs[i];show(i);lb.hidden=false;document.body.style.overflow='hidden';lb.querySelector('.lb__close').focus();}
 function close(){lb.hidden=true;document.body.style.overflow='';if(last)last.focus();}
-document.querySelectorAll('button.zoom').forEach(function(b){b.addEventListener('click',function(){open(b)})});
+bs.forEach(function(b,i){b.addEventListener('click',function(){open(i)})});
+lb.querySelectorAll('.lb__nav').forEach(function(n){n.addEventListener('click',function(){show(cur+(+n.dataset.step))})});
 lb.querySelector('.lb__close').addEventListener('click',close);
 lb.addEventListener('click',function(e){if(e.target===lb)close()});
-document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});})();
+document.addEventListener('keydown',function(e){if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowRight')show(cur+1);if(e.key==='ArrowLeft')show(cur-1);});})();
 </script>
 <script type="module" src="../assets/system.js"></script>
 <script type="module" src="../assets/motion/motion.js"></script>
