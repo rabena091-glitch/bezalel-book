@@ -302,6 +302,18 @@
   }
   footer.closing .closing__links { margin-top: 0 !important; }
   footer.closing { padding-top: 40px !important; }
+  /* footer on a phone: three compact groups, labels faint, links bright */
+  @media (max-width: 1023px) {
+    footer.closing .closing__links .grid { display: flex !important; flex-direction: column; gap: 26px !important; }
+    footer.closing .closing__links .grid > * { margin: 0 !important; }
+    footer.closing .footer__col h3 { margin: 0 0 6px !important; color: rgba(255,255,255,.55) !important; font-size: 11px !important; letter-spacing: .08em !important; }
+    footer.closing .footer__col ul { display: flex; flex-direction: column; gap: 0; margin: 0 !important; padding: 0 !important; }
+    footer.closing .footer__col li { margin: 0 !important; padding: 0 !important; }
+    footer.closing .footer__col a { display: inline-block; padding: 5px 0 !important; min-height: 0 !important; color: #fff !important; font-weight: 500 !important; line-height: 1.4 !important; }
+    footer.closing .nav__logo { font-size: 18px !important; font-weight: 700 !important; color: #fff !important; }
+    footer.closing .footer__legal { margin-top: 26px !important; padding-top: 16px !important; font-size: 13px; color: rgba(255,255,255,.55); }
+    footer.closing { padding-top: 32px !important; padding-bottom: 28px !important; }
+  }
 </style>
 </head>
 <body>
