@@ -91,8 +91,17 @@
   .letters b { font-weight: 400; color: var(--p-accent); }
   @media (max-width: 639px) { .excerpt { font-size: 17px; } .excerpt p { font-size: 17px !important; line-height: 1.55 !important; } .read__tabs button { padding: 0 14px; } }
   .hero__for { margin: 12px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 46ch; }
+  @media (min-width: 1024px) {
+    .hero--product .hero__head { grid-template-rows: auto auto auto !important; }
+    .hero--product .hero__head h1 { grid-row: 1 / span 3 !important; }
+    .hero--product .hero__head .hero__lead { grid-row: 1 !important; }
+    .hero--product .hero__head .hero__for { grid-column: 9 / -1; grid-row: 2; margin: 0; max-width: none; }
+    .hero--product .hero__head > .btn-row { grid-row: 3 !important; }
+    .hero--product .hero__stage { width: min(100%, 880px) !important; margin-left: auto !important; margin-right: auto !important; height: auto !important; aspect-ratio: 1133 / 855; }
+  }
   .author-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
-  button.zoom { border: 0; padding: 0; cursor: zoom-in; display: block; }
+  button.zoom { border: 0; padding: 0; cursor: zoom-in; display: block; width: 100%; min-width: 0; font: inherit; }
+  button.zoom > img { width: 100%; height: auto; }
   .lb { position: fixed; inset: 0; z-index: 100; background: rgba(10,18,34,.96); overflow: auto; -webkit-overflow-scrolling: touch; display: flex; align-items: center; }
   .lb[hidden] { display: none !important; }
   .lb img { display: block; height: min(86vh, 720px); width: auto; max-width: none; margin: auto; padding: 0 16px; }
@@ -166,7 +175,7 @@
               <span class="t-small muted">One chapter for each name in the verse</span>
             </a>
             <a class="menu-card span-4" href="#inside">
-              <div class="panel"><img class="frame__img" src="assets/img/spread-bezalel.jpg" alt="The open book at the chapter In the Shadow of God" loading="lazy"></button>
+              <div class="panel"><img class="frame__img" src="assets/img/spread-bezalel.jpg" alt="The open book at the chapter In the Shadow of God" loading="lazy"></div>
               <span class="t-card">Inside the book</span>
               <span class="t-small muted">Hebrew verse, English text, a full picture</span>
             </a>
@@ -241,7 +250,7 @@
         <p>Each chapter opens on a Hebrew verse, then the English text, with Scripture cited by book and verse.</p>
       </div>
       <div class="grid fill">
-        <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-bezalel-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></div>
+        <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-bezalel-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></button>
         <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-hur-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-hur.jpg" alt="Pages 12 and 13: Hur holding white linen, beside the chapter Hur. The Path of Purity" loading="lazy" data-source="client" data-subject="spread, chapter on Hur"></button>
         <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-yehuda-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-yehuda.jpg" alt="Pages 20 and 21: the camp of Yehuda under blue banners, beside the chapter Yehuda. The Tribe of Praise" loading="lazy" data-source="client" data-subject="spread, chapter on Yehuda"></button>
       </div>
