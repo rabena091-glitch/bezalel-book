@@ -320,6 +320,25 @@
     header.nav .nav__actions .btn { min-height: 38px !important; padding: 0 18px !important; font-size: 15px !important; }
   }
   header.nav .nav__actions .btn { background: #b8501c !important; border-color: #b8501c !important; color: #fff !important; }
+  /* one split order button, always in the header */
+  .buy-split { display: flex; height: 40px; border-radius: 999px; overflow: hidden; font: 600 15px/1 var(--font-text); }
+  .buy-split a { display: flex; align-items: center; justify-content: center; color: #fff !important; text-decoration: none !important; white-space: nowrap; }
+  .buy-split__main { flex: 1 1 auto; padding: 0 20px; background: #b8501c; }
+  .buy-split__main:hover { background: #a2461a; }
+  .buy-split__pdf { flex: 0 0 auto; padding: 0 16px; background: #4d5e78; border-left: 1px solid rgba(255,255,255,.35); }
+  .buy-split__pdf:hover { background: #3f4f67; }
+  .buy-split a:focus-visible { outline: 2px solid #13284a; outline-offset: -4px; }
+  header.nav .nav__actions .btn { display: none !important; }
+  @media (min-width: 1024px) { .buy-split { width: 290px; } }
+  @media (max-width: 1023px) {
+    header.nav .nav__logo { display: none !important; }
+    header.nav .nav__actions { display: flex !important; flex: 1 1 auto; margin: 0 12px 0 0 !important; }
+    header.nav .nav__actions .buy-split { width: 100%; height: 42px; font-size: 16px; }
+  }
+  @media (max-width: 1023px) {
+    header.nav .nav__actions > .buy-split { display: flex !important; }
+    .nav.is-open .nav__actions { display: flex !important; position: static !important; padding: 0 !important; border: 0 !important; background: none !important; }
+  }
 </style>
 </head>
 <body>
@@ -361,7 +380,7 @@
       <div class="nav__item"><a class="nav__link" href="#author">Author</a></div>
     </nav>
     <div class="nav__actions">
-      <a class="btn btn--primary" href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Shop</a>
+      <div class="buy-split"><a class="buy-split__main" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book</a><a class="buy-split__pdf" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of" aria-label="Buy the PDF">PDF</a></div>
     </div>
     <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu">
       <svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
@@ -499,7 +518,7 @@
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
         </ul>
-        <div class="edition__buy"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a><a class="btn btn--primary btn--pdf" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
+
         </div>
       </div>
     </div>
