@@ -8,11 +8,14 @@
 <meta property="og:type" content="website">
 <meta property="og:title" content="Bezalel: an illustrated book on the first artist of the Bible">
 <meta property="og:description" content="A 24-page hardcover by Ephraim Kalish on the names in Bezalel's genealogy.">
-<meta property="og:image" content="share.jpg">
+<meta property="og:image" content="https://rabena091-glitch.github.io/bezalel-book/share.jpg">
+<meta property="og:image:width" content="1133">
+<meta property="og:image:height" content="855">
+<meta property="og:url" content="https://rabena091-glitch.github.io/bezalel-book/">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta name="theme-color" content="#ffffff">
-<!-- <link rel="canonical" href="https://[the client's domain]/"> -->
+<link rel="canonical" href="https://rabena091-glitch.github.io/bezalel-book/">
 <meta name="site-kind" content="other">
 <meta name="page-type" content="product">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -87,6 +90,17 @@
   .letters { display: flex; gap: 6px; font-family: "Frank Ruhl Libre", serif; font-size: 52px !important; line-height: 1 !important; color: var(--ink); }
   .letters b { font-weight: 400; color: var(--p-accent); }
   @media (max-width: 639px) { .excerpt { font-size: 17px; } .excerpt p { font-size: 17px !important; line-height: 1.55 !important; } .read__tabs button { padding: 0 14px; } }
+  .hero__for { margin: 12px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); max-width: 46ch; }
+  .author-links { display: flex; flex-wrap: wrap; gap: 8px 24px; }
+  button.zoom { border: 0; padding: 0; cursor: zoom-in; display: block; }
+  .lb { position: fixed; inset: 0; z-index: 100; background: rgba(10,18,34,.96); overflow: auto; -webkit-overflow-scrolling: touch; display: flex; align-items: center; }
+  .lb[hidden] { display: none !important; }
+  .lb img { display: block; height: min(86vh, 720px); width: auto; max-width: none; margin: auto; padding: 0 16px; }
+  @media (min-width: 1024px) { .lb img { height: auto; width: min(96vw, 1548px); } }
+  .lb__close { position: fixed; top: calc(12px + env(safe-area-inset-top, 0px)); right: calc(12px + env(safe-area-inset-right, 0px)); z-index: 101; width: 48px; height: 48px; border-radius: 999px; border: 0; background: #fff; color: #13284a; font: 500 26px/1 var(--font-text); cursor: pointer; }
+  .lb__hint { position: fixed; left: 0; right: 0; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); text-align: center; color: #c9d1de; font: 400 13px/1.4 var(--font-text); pointer-events: none; }
+  @media (min-width: 1024px) { .lb__hint { display: none; } }
+  @media (max-width: 639px) { header.nav .nav__actions { display: none !important; } }
   .only-phone { display: none !important; }
   @media (max-width: 639px) { .only-phone { display: block !important; } .only-wide { display: none !important; } }
   main > section.section, footer.closing { height: auto !important; min-height: 0 !important; padding-top: 88px; padding-bottom: 88px; }
@@ -152,7 +166,7 @@
               <span class="t-small muted">One chapter for each name in the verse</span>
             </a>
             <a class="menu-card span-4" href="#inside">
-              <div class="panel"><img class="frame__img" src="assets/img/spread-bezalel.jpg" alt="The open book at the chapter In the Shadow of God" loading="lazy"></div>
+              <div class="panel"><img class="frame__img" src="assets/img/spread-bezalel.jpg" alt="The open book at the chapter In the Shadow of God" loading="lazy"></button>
               <span class="t-card">Inside the book</span>
               <span class="t-small muted">Hebrew verse, English text, a full picture</span>
             </a>
@@ -185,6 +199,7 @@
         <div>
           <h1 id="hero-h">An illustrated book on Bezalel's lineage</h1>
           <p class="hero__lead">One name a chapter, read in the original Hebrew. Hardcover, $26.90.</p>
+          <p class="hero__for">For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p>
         </div>
         <div class="btn-row"><a class="btn btn--primary" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a></div>
       </div>
@@ -226,9 +241,9 @@
         <p>Each chapter opens on a Hebrew verse, then the English text, with Scripture cited by book and verse.</p>
       </div>
       <div class="grid fill">
-        <div class="pic pic--spread span-4"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></div>
-        <div class="pic pic--spread span-4"><img src="assets/img/spread-hur.jpg" alt="Pages 12 and 13: Hur holding white linen, beside the chapter Hur. The Path of Purity" loading="lazy" data-source="client" data-subject="spread, chapter on Hur"></div>
-        <div class="pic pic--spread span-4"><img src="assets/img/spread-yehuda.jpg" alt="Pages 20 and 21: the camp of Yehuda under blue banners, beside the chapter Yehuda. The Tribe of Praise" loading="lazy" data-source="client" data-subject="spread, chapter on Yehuda"></div>
+        <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-bezalel-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-bezalel.jpg" alt="Pages 4 and 5: Bezalel under an eagle's wing, beside the chapter Bezalel. In the Shadow of God" loading="lazy" data-source="client" data-subject="spread, chapter on Bezalel"></div>
+        <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-hur-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-hur.jpg" alt="Pages 12 and 13: Hur holding white linen, beside the chapter Hur. The Path of Purity" loading="lazy" data-source="client" data-subject="spread, chapter on Hur"></button>
+        <button type="button" class="pic pic--spread span-4 zoom" data-full="assets/img/spread-yehuda-full.jpg" aria-label="Open the spread full screen"><img src="assets/img/spread-yehuda.jpg" alt="Pages 20 and 21: the camp of Yehuda under blue banners, beside the chapter Yehuda. The Tribe of Praise" loading="lazy" data-source="client" data-subject="spread, chapter on Yehuda"></button>
       </div>
     </div>
   </section>
@@ -292,7 +307,7 @@
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Language</span><span class="rows__value">English and Hebrew</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
-          <li><span class="rows__name">Digital edition</span><span class="rows__value">PDF download</span></li>
+          <li><span class="rows__name">Digital edition</span><span class="rows__value">PDF, $6.90</span></li>
         </ul>
         <div class="pic pic--43 span-6 start-7"><img src="assets/img/book-standing.jpg" alt="The hardcover standing upright on a dark blue ground" loading="lazy" data-source="client" data-subject="the hardcover"></div>
       </div>
@@ -306,7 +321,7 @@
           <h2 id="author-h">Ephraim Kalish, artist and author</h2>
           <p>An Israeli artist and filmmaker behind the TORAART project. He has studied Bezalel for more than thirty years and writes about him as one artist about another.</p>
           <p>His film Bezalel tells the same story on screen.</p>
-          <p><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Watch the film</a></p>
+          <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Watch the film</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Write to the author</a></p>
         </div>
         <div class="frame frame--photo frame--fill span-6 start-7">
           <img class="frame__img" src="assets/img/author.jpg" alt="Portrait of Ephraim Kalish, bearded, in glasses, printed in three tones of brown" style="object-position: 50% 30%" loading="lazy" data-source="client" data-subject="portrait of the author">
@@ -321,7 +336,7 @@
     <div class="closing__cta close--type">
       <div class="section-head">
         <h2 id="close-h">Order Bezalel in hardcover</h2>
-        <p>$26.90 through AmendesignShop on Etsy.</p>
+        <p>$26.90 through AmendesignShop on Etsy. <a class="link" href="https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of">Buy the PDF for $6.90</a></p>
       </div>
       <a class="btn btn--primary btn--xl btn--wide" href="https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists">Order the book<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
     </div>
@@ -331,10 +346,8 @@
           <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
           <p class="footer__lede">Books and films by Ephraim Kalish</p>
         </div>
-        <div class="span-2 footer__col"><h3>Pages</h3><ul><li><a href="#lineage">Four names</a></li><li><a href="#inside">Inside</a></li><li><a href="#read">Read a page</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Illustrations</h3><ul><li><a href="#illustrations">Pictures</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Edition</h3><ul><li><a href="#edition">Details</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">Etsy shop</a></li></ul></div>
-        <div class="span-2 footer__col"><h3>Author</h3><ul><li><a href="#author">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+        <div class="span-4 footer__col"><h3>The author</h3><ul><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Ephraim Kalish on Facebook</a></li><li><a href="#author">About the author</a></li></ul></div>
+        <div class="span-4 footer__col"><h3>More by Ephraim Kalish</h3><ul><li><a href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Books and films</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">AmendesignShop on Etsy</a></li></ul></div>
       </div>
       <div class="footer__legal">
         <span>&copy; 2026 Ephraim Kalish</span>
@@ -348,6 +361,16 @@
 (function(){var l=document.querySelector('.read__tabs');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
 function sel(b){t.forEach(function(x){var on=x===b;x.setAttribute('aria-selected',on);x.tabIndex=on?0:-1;document.getElementById(x.getAttribute('aria-controls')).hidden=!on;});}
 t.forEach(function(b,i){b.addEventListener('click',function(){sel(b)});b.addEventListener('keydown',function(e){var k=e.key==='ArrowRight'?1:e.key==='ArrowLeft'?-1:0;if(k){var n=t[(i+k+t.length)%t.length];sel(n);n.focus();e.preventDefault();}});});})();
+</script>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Spread"><button type="button" class="lb__close" aria-label="Close">×</button><img alt=""><p class="lb__hint">Swipe sideways to read both pages</p></div>
+<script>
+(function(){var lb=document.getElementById('lb'),im=lb.querySelector('img'),last;
+function open(b){last=b;im.src=b.dataset.full;im.alt=b.querySelector('img').alt;lb.hidden=false;document.body.style.overflow='hidden';lb.scrollLeft=0;lb.querySelector('.lb__close').focus();}
+function close(){lb.hidden=true;document.body.style.overflow='';if(last)last.focus();}
+document.querySelectorAll('button.zoom').forEach(function(b){b.addEventListener('click',function(){open(b)})});
+lb.querySelector('.lb__close').addEventListener('click',close);
+lb.addEventListener('click',function(e){if(e.target===lb)close()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!lb.hidden)close()});})();
 </script>
 <script type="module" src="assets/system.js"></script>
 <script type="module" src="assets/motion/motion.js"></script>
