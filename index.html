@@ -18,6 +18,7 @@
 <link rel="canonical" href="https://rabena091-glitch.github.io/bezalel-book/">
 <meta name="site-kind" content="other">
 <meta name="page-type" content="product">
+<script type="application/ld+json">[{"@context": "https://schema.org", "@type": "Book", "@id": "https://rabena091-glitch.github.io/bezalel-book/#book", "name": "Bezalel. The Mystery of the Artist's Lineage", "author": {"@type": "Person", "name": "Ephraim Kalish", "sameAs": ["https://www.facebook.com/ephraimeduard.kalish/"]}, "illustrator": {"@type": "Person", "name": "Ephraim Kalish"}, "inLanguage": "en", "numberOfPages": 24, "genre": "Bible study", "about": [{"@type": "Person", "name": "Bezalel"}, {"@type": "Thing", "name": "Exodus 31:2-5"}], "description": "An illustrated book by Ephraim Kalish on the four names of Bezalel's genealogy (Exodus 31:2), read in the original Hebrew as a key to the artist's calling.", "image": "https://rabena091-glitch.github.io/bezalel-book/share.jpg", "url": "https://rabena091-glitch.github.io/bezalel-book/", "workExample": [{"@type": "Book", "bookFormat": "https://schema.org/Hardcover", "numberOfPages": 24, "offers": {"@type": "Offer", "price": "26.90", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.etsy.com/listing/4593933691/bezalel-the-mystery-of-the-artists", "seller": {"@type": "Organization", "name": "AmendesignShop"}}}, {"@type": "Book", "bookFormat": "https://schema.org/EBook", "offers": {"@type": "Offer", "price": "6.90", "priceCurrency": "USD", "availability": "https://schema.org/InStock", "url": "https://www.etsy.com/listing/4594645086/ephraim-kalish-bezalel-the-mystery-of", "seller": {"@type": "Organization", "name": "AmendesignShop"}}}]}, {"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "Who is this book for?", "acceptedAnswer": {"@type": "Answer", "text": "For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling."}}, {"@type": "Question", "name": "Do I need to know Hebrew?", "acceptedAnswer": {"@type": "Answer", "text": "No. The book is written in English. Every Hebrew word is given in transliteration with its meaning, so you can follow the reading without knowing the language."}}, {"@type": "Question", "name": "Is it a children’s book?", "acceptedAnswer": {"@type": "Answer", "text": "No. It is a short illustrated book of 24 pages written for adult readers."}}, {"@type": "Question", "name": "Is this a commentary or a personal reading?", "acceptedAnswer": {"@type": "Answer", "text": "A personal reading. The author works from the Hebrew text of Scripture and cites every verse he uses, but the connections he draws between the names and their meanings are his own interpretation."}}, {"@type": "Question", "name": "What is the difference between the hardcover and the PDF?", "acceptedAnswer": {"@type": "Answer", "text": "The hardcover is printed to order in the USA, with a glossy or matte cover. The PDF is the digital edition of the same book and downloads right after purchase."}}, {"@type": "Question", "name": "Where do I buy it?", "acceptedAnswer": {"@type": "Answer", "text": "Both editions are sold through AmendesignShop on Etsy, a Star Seller rated 4.9 by more than 550 buyers. Use the Order the book or PDF button at the top of the page."}}]}]</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500..700&family=Hanken+Grotesk:wght@400..700&family=Noto+Serif+Hebrew:wght@400&display=swap" rel="stylesheet">
@@ -341,6 +342,14 @@
   }
   /* selected chapter tab: light grey-blue, so it is not mistaken for the PDF button */
   .read__tabs button[aria-selected="true"] { background: #dde3ec !important; border-color: #b9c3d2 !important; color: #2b3a52 !important; font-weight: 600 !important; }
+  .qa { display: flex; flex-direction: column; max-width: 760px; border-top: 1px solid var(--rule); }
+  .qa__item { border-bottom: 1px solid var(--rule); }
+  .qa__item summary { pointer-events: auto; list-style: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 14px 0; font-weight: 600; font-size: var(--body); line-height: 1.4; color: var(--ink); }
+  .qa__item summary::-webkit-details-marker { display: none; }
+  .qa__item summary::after { content: "+"; flex: none; font-weight: 400; font-size: 22px; line-height: 1; color: #4d5e78; }
+  .qa__item[open] summary::after { content: "−"; }
+  .qa__item summary:focus-visible { outline: 2px solid #4d5e78; outline-offset: 2px; }
+  .qa__item p { margin: 0 0 16px !important; max-width: 68ch; color: var(--ink); }
 </style>
 </head>
 <body>
@@ -522,6 +531,22 @@
         </ul>
 
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <div class="wrap">
+      <div class="section-head">
+        <h2 id="faq-h">Questions about the book</h2>
+      </div>
+      <div class="qa">
+        <details class="qa__item"><summary>Who is this book for?</summary><p>For artists and craftspeople, readers of the Bible, and anyone drawn to the nature of the creative calling.</p></details>
+        <details class="qa__item"><summary>Do I need to know Hebrew?</summary><p>No. The book is written in English. Every Hebrew word is given in transliteration with its meaning, so you can follow the reading without knowing the language.</p></details>
+        <details class="qa__item"><summary>Is it a children’s book?</summary><p>No. It is a short illustrated book of 24 pages written for adult readers.</p></details>
+        <details class="qa__item"><summary>Is this a commentary or a personal reading?</summary><p>A personal reading. The author works from the Hebrew text of Scripture and cites every verse he uses, but the connections he draws between the names and their meanings are his own interpretation.</p></details>
+        <details class="qa__item"><summary>What is the difference between the hardcover and the PDF?</summary><p>The hardcover is printed to order in the USA, with a glossy or matte cover. The PDF is the digital edition of the same book and downloads right after purchase.</p></details>
+        <details class="qa__item"><summary>Where do I buy it?</summary><p>Both editions are sold through AmendesignShop on Etsy, a Star Seller rated 4.9 by more than 550 buyers. Use the Order the book or PDF button at the top of the page.</p></details>
       </div>
     </div>
   </section>
