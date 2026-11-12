@@ -261,12 +261,22 @@
   .edition__buy .btn--pdf:hover { background: #3f4f67 !important; }
   @media (max-width: 639px) { .edition__buy { max-width: none; } }
   .edition__note { margin-top: 20px; }
-  #mail-toast { position: fixed; left: 50%; bottom: 20px; transform: translate(-50%, 140%); max-width: calc(100% - 32px); background: #13284a; color: #fff; font: 500 15px/1.4 var(--font-text); padding: 12px 16px; border-radius: 12px; box-shadow: 0 6px 24px rgba(0,0,0,.25); transition: transform .25s; z-index: 1000; word-break: break-all; }
-  #mail-toast.on { transform: translate(-50%, 0); }
-  #mail-toast button { background: #b8501c; color: #fff; border: 0; border-radius: 999px; padding: 4px 12px; font: 600 14px/1.4 var(--font-text); cursor: pointer; }
+  .cform { max-width: 560px; margin: 0 0 40px; scroll-margin-top: 96px; }
+  .cform h2 { color: #fff !important; margin: 0 0 6px; }
+  .cform__lede { color: rgba(255,255,255,.75); margin: 0 0 20px; }
+  .cform label { display: block; color: rgba(255,255,255,.75); font: 600 13px/1.4 var(--font-text); margin: 14px 0 6px; }
+  .cform input, .cform textarea { width: 100%; box-sizing: border-box; background: #fff; color: #13284a; border: 1px solid #fff; border-radius: 10px; padding: 12px 14px; font: 400 16px/1.4 var(--font-text); }
+  .cform textarea { min-height: 140px; resize: vertical; }
+  .cform input:focus, .cform textarea:focus { outline: 2px solid #e9a27c; outline-offset: 1px; }
+  .cform__hp { position: absolute; left: -9999px; }
+  .cform button { margin-top: 18px; background: #b8501c; color: #fff; border: 0; border-radius: 999px; padding: 12px 28px; font: 600 16px/1 var(--font-text); cursor: pointer; }
+  .cform button:hover { background: #a2461a; }
+  .cform button[disabled] { opacity: .6; cursor: default; }
+  .cform__status { margin: 14px 0 0; color: #fff; min-height: 1.4em; }
+  @media (max-width: 639px) { .cform button { width: 100%; } }
+
   .edition__note a, .qa__item p a { color: #b8501c !important; font-weight: 600; text-decoration: underline !important; text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
   .edition__note a:hover, .qa__item p a:hover { color: #a2461a !important; }
-  footer.closing .js-mail { word-break: break-all; }
   .read__tabs { flex-wrap: nowrap; gap: 6px; }
   .read__tabs button { padding: 0 14px; }
   .read__tabs button[aria-selected="true"] { background: #4d5e78 !important; border-color: #4d5e78 !important; color: #fff !important; }
@@ -518,7 +528,7 @@
             <h2 id="author-h">Ephraim Kalish</h2>
           </div>
           <p>Ephraim Kalish is an Israeli artist, author, and the filmmaker behind the TORAART project. His work approaches Scripture through the Hebrew language and Jewish cultural context, exploring the biblical meaning of creativity and the artist’s calling before God.</p>
-          <p class="author-links"><a class="link js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">Write to the author</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Facebook</a><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">The film “Bezalel. Son of Light”</a></p>
+          <p class="author-links"><a class="link" href="#contact-author">Write to the author</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Facebook</a><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">The film “Bezalel. Son of Light”</a></p>
         </div>
     </div>
   </section>
@@ -537,7 +547,7 @@
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
         </ul>
-        <p class="edition__note">For bulk orders or signed copies, <a class="js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">write to the author</a>.</p>
+        <p class="edition__note">For bulk orders or signed copies, <a href="#contact-author">write to the author</a>.</p>
 
         </div>
       </div>
@@ -556,7 +566,7 @@
         <details class="qa__item"><summary>Is this a commentary or a personal reading?</summary><p>A personal reading. The author works from the Hebrew text of Scripture and cites every verse he uses, but the connections he draws between the names and their meanings are his own interpretation.</p></details>
         <details class="qa__item"><summary>What is the difference between the hardcover and the PDF?</summary><p>The printed book has a hard cover, glossy or matte, and is printed to order in the USA. Open in your hands, it shows each spread whole, picture and text side by side, as the book was designed to be read. The PDF is the digital edition of the same book and downloads right after purchase.</p></details>
         <details class="qa__item"><summary>Where do I buy it?</summary><p>Both editions are sold through AmendesignShop on Etsy, a Star Seller rated 4.9 by more than 550 buyers. Use the Order the book or PDF button at the top of the page.</p></details>
-        <details class="qa__item"><summary>Can I order several copies or a signed copy?</summary><p>Yes. For bulk orders for a church, school or bookshop, for signed copies, or for delivery to a country the Etsy listing does not ship to, write to the author directly. Questions about an order already placed on Etsy are best sent through Etsy messages, where all the order details are kept. <a class="js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">Write to the author</a>.</p></details>
+        <details class="qa__item"><summary>Can I order several copies or a signed copy?</summary><p>Yes. For bulk orders for a church, school or bookshop, for signed copies, or for delivery to a country the Etsy listing does not ship to, write to the author directly. Questions about an order already placed on Etsy are best sent through Etsy messages, where all the order details are kept. <a href="#contact-author">Write to the author</a>.</p></details>
       </div>
     </div>
   </section>
@@ -565,12 +575,28 @@
 
 <footer class="footer closing footer--dark ground-inverse" id="contact" aria-label="Footer">
   <div class="wrap">
+    <form class="cform" id="contact-author" action="https://api.web3forms.com/submit" method="POST" aria-labelledby="cform-h">
+      <h2 id="cform-h">Write to the author</h2>
+      <p class="cform__lede">Bulk orders, signed copies, invitations to speak, or a question about the book.</p>
+      <input type="hidden" name="access_key" value="8d25d1c4-dab2-4e80-a733-ff04fc5ea946">
+      <input type="hidden" name="subject" value="Bezalel book: message from the website">
+      <input type="hidden" name="from_name" value="Bezalel book website">
+      <input type="checkbox" name="botcheck" class="cform__hp" tabindex="-1" autocomplete="off" aria-hidden="true">
+      <label for="cf-name">Your name</label>
+      <input id="cf-name" name="name" type="text" required autocomplete="name">
+      <label for="cf-email">Your email</label>
+      <input id="cf-email" name="email" type="email" required autocomplete="email">
+      <label for="cf-msg">Message</label>
+      <textarea id="cf-msg" name="message" required></textarea>
+      <button type="submit">Send</button>
+      <p class="cform__status" role="status" aria-live="polite"></p>
+    </form>
     <div class="closing__links">
       <div class="grid">
         <div class="span-4 stack-4">
           <a class="nav__logo" href="#top"><span class="mark" data-mark="arc" aria-hidden="true"></span>Bezalel</a>
         </div>
-        <div class="span-4 footer__col" id="contact-author"><h3>The author</h3><ul><li><a class="js-mail" data-u="torahart7" data-d="gmail.com" href="#contact-author">Write to the author</a></li><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Ephraim Kalish on Facebook</a></li><li><a href="who-is-bezalel/">Who is Bezalel? An article</a></li></ul></div>
+        <div class="span-4 footer__col"><h3>The author</h3><ul><li><a href="#contact-author">Write to the author</a></li><li><a href="https://www.facebook.com/ephraimeduard.kalish/">Ephraim Kalish on Facebook</a></li><li><a href="who-is-bezalel/">Who is Bezalel? An article</a></li></ul></div>
         <div class="span-4 footer__col"><h3>More by Ephraim Kalish</h3><ul><li><a href="https://torah-art.github.io/">Torah-Art: books and articles</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop?section_id=54528522">Books and films</a></li><li><a href="https://www.etsy.com/shop/AmendesignShop">AmendesignShop on Etsy</a></li></ul></div>
       </div>
       <div class="footer__legal">
@@ -582,10 +608,12 @@
 </footer>
 
 <script>
-(function(){[].forEach.call(document.querySelectorAll('.js-mail'),function(a){var m=a.getAttribute('data-u')+'@'+a.getAttribute('data-d');a.href='mailto:'+m+'?subject='+encodeURIComponent('Bezalel book');if(!a.hasAttribute('data-keep'))a.textContent=m;a.addEventListener('click',function(){var t=document.getElementById('mail-toast');if(!t){t=document.createElement('div');t.id='mail-toast';t.setAttribute('role','status');document.body.appendChild(t);}
-t.innerHTML='Email: <b>'+m+'</b> &nbsp;<button type="button">Copy</button>';t.className='on';
-t.querySelector('button').onclick=function(){var b=this;try{navigator.clipboard.writeText(m).then(function(){b.textContent='Copied';});}catch(e){}};
-clearTimeout(t._h);t._h=setTimeout(function(){t.className='';},9000);});});})();
+(function(){var f=document.getElementById('contact-author');if(!f)return;var st=f.querySelector('.cform__status'),btn=f.querySelector('button');
+[].forEach.call(document.querySelectorAll('a[href="#contact-author"]'),function(a){a.addEventListener('click',function(){setTimeout(function(){var n=document.getElementById('cf-name');if(n)n.focus({preventScroll:true});},500);});});
+f.addEventListener('submit',function(e){e.preventDefault();btn.disabled=true;st.textContent='Sending…';
+fetch(f.action,{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)}).then(function(r){return r.json();}).then(function(d){
+if(d.success){f.reset();st.textContent='Thank you. Your message has been sent, and the author will reply by email.';}else{st.textContent='The message was not sent. Please try again in a minute.';}
+}).catch(function(){st.textContent='The message was not sent. Please check your connection and try again.';}).then(function(){btn.disabled=false;});});})();
 </script>
 <script>
 (function(){var l=document.querySelector('.read__tabs');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
