@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://rabena091-glitch.github.io/bezalel-book/sitemap.xml
+Sitemap: https://torah-art.github.io/bezalel-book/sitemap.xml
