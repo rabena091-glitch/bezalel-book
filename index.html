@@ -513,7 +513,7 @@
             <h2 id="author-h">Ephraim Kalish</h2>
           </div>
           <p>Ephraim Kalish is an Israeli artist, author, and the filmmaker behind the TORAART project. His work approaches Scripture through the Hebrew language and Jewish cultural context, exploring the biblical meaning of creativity and the artist’s calling before God.</p>
-          <p class="author-links"><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">Get the film</a><a class="link" href="#contact-author">Write to the author</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Facebook</a></p>
+          <p class="author-links"><a class="link js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">Write to the author</a><a class="link" href="https://www.facebook.com/ephraimeduard.kalish/">Facebook</a><a class="link" href="https://www.etsy.com/listing/4472433765/bezalel-biblical-documentary-film-by">The film “Bezalel, Son of Light”</a></p>
         </div>
     </div>
   </section>
@@ -532,7 +532,7 @@
           <li><span class="rows__name">Cover</span><span class="rows__value">Glossy or matte</span></li>
           <li><span class="rows__name">Printing</span><span class="rows__value">In the USA, to order</span></li>
         </ul>
-        <p class="edition__note">For bulk orders or signed copies, <a href="#contact-author">write to the author</a>.</p>
+        <p class="edition__note">For bulk orders or signed copies, <a class="js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">write to the author</a>.</p>
 
         </div>
       </div>
@@ -551,7 +551,7 @@
         <details class="qa__item"><summary>Is this a commentary or a personal reading?</summary><p>A personal reading. The author works from the Hebrew text of Scripture and cites every verse he uses, but the connections he draws between the names and their meanings are his own interpretation.</p></details>
         <details class="qa__item"><summary>What is the difference between the hardcover and the PDF?</summary><p>The printed book has a hard cover, glossy or matte, and is printed to order in the USA. Open in your hands, it shows each spread whole, picture and text side by side, as the book was designed to be read. The PDF is the digital edition of the same book and downloads right after purchase.</p></details>
         <details class="qa__item"><summary>Where do I buy it?</summary><p>Both editions are sold through AmendesignShop on Etsy, a Star Seller rated 4.9 by more than 550 buyers. Use the Order the book or PDF button at the top of the page.</p></details>
-        <details class="qa__item"><summary>Can I order several copies or a signed copy?</summary><p>Yes. For bulk orders for a church, school or bookshop, for signed copies, or for delivery to a country the Etsy listing does not ship to, write to the author directly. Questions about an order already placed on Etsy are best sent through Etsy messages, where all the order details are kept. <a href="#contact-author">Write to the author</a>.</p></details>
+        <details class="qa__item"><summary>Can I order several copies or a signed copy?</summary><p>Yes. For bulk orders for a church, school or bookshop, for signed copies, or for delivery to a country the Etsy listing does not ship to, write to the author directly. Questions about an order already placed on Etsy are best sent through Etsy messages, where all the order details are kept. <a class="js-mail" data-u="torahart7" data-d="gmail.com" data-keep href="#contact-author">Write to the author</a>.</p></details>
       </div>
     </div>
   </section>
@@ -577,7 +577,7 @@
 </footer>
 
 <script>
-(function(){[].forEach.call(document.querySelectorAll('.js-mail'),function(a){var m=a.getAttribute('data-u')+'@'+a.getAttribute('data-d');a.href='mailto:'+m+'?subject='+encodeURIComponent('Bezalel book');a.textContent=m;});})();
+(function(){[].forEach.call(document.querySelectorAll('.js-mail'),function(a){var m=a.getAttribute('data-u')+'@'+a.getAttribute('data-d');a.href='mailto:'+m+'?subject='+encodeURIComponent('Bezalel book');if(!a.hasAttribute('data-keep'))a.textContent=m;});})();
 </script>
 <script>
 (function(){var l=document.querySelector('.read__tabs');if(!l)return;var t=[].slice.call(l.querySelectorAll('[role=tab]'));
